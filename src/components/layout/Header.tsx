@@ -1,17 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
-import Link from "next/link";
 import {
-  motion,
   AnimatePresence,
-  useScroll,
+  motion,
   useMotionValueEvent,
+  useScroll,
 } from "framer-motion";
-import { Menu, X, ArrowUp, Mail, Home } from "lucide-react";
+import { ArrowUp, Mail,Menu, X } from "lucide-react";
+import Link from "next/link";
+import React, { useState } from "react";
+
+import { useActiveSection } from "@/hooks/useActiveSection";
+
 import { Button } from "../ui/Button";
 import { ThemeToggle } from "../ui/ThemeToggle";
-import { useActiveSection } from "@/hooks/useActiveSection";
 
 const navItems = [
   { label: "Projects", href: "#projects" },

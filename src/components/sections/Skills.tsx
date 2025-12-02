@@ -1,17 +1,19 @@
 "use client";
 
-import React from "react";
 import { motion } from "framer-motion";
-import { Section } from "../ui/Section";
-import portfolioData from "@/data/portfolio-data.json";
 import {
+  Database,
   Layout,
   Server,
-  Database,
-  Terminal,
   Sparkles,
+  Terminal,
   Users,
 } from "lucide-react";
+import React from "react";
+
+import portfolioData from "@/data/portfolio-data.json";
+
+import { Section } from "../ui/Section";
 
 const skills = portfolioData.skills;
 

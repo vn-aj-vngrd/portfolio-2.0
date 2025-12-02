@@ -1,8 +1,10 @@
 "use client";
-import React, { useRef } from "react";
-import { Section } from "../ui/Section";
-import portfolioData from "@/data/portfolio-data.json";
 import { motion, useScroll, useSpring } from "framer-motion";
+import React, { useRef } from "react";
+
+import portfolioData from "@/data/portfolio-data.json";
+
+import { Section } from "../ui/Section";
 
 const experience = portfolioData.experience.map((job) => ({
   role: job.role,

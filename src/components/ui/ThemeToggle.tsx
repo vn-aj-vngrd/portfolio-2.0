@@ -1,10 +1,11 @@
 "use client";
 
-import * as React from "react";
+import { motion } from "framer-motion";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import * as React from "react";
+
 import { Button } from "@/components/ui/Button";
-import { motion } from "framer-motion";
 
 export function ThemeToggle({ compact = false }: { compact?: boolean }) {
   const { setTheme, resolvedTheme } = useTheme();

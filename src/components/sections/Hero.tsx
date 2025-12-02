@@ -1,12 +1,14 @@
 "use client";
 
-import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
-import { Button } from "../ui/Button";
-import { Section } from "../ui/Section";
-import { HeroBackground } from "../ui/HeroBackground";
+import React from "react";
+
 import portfolioData from "@/data/portfolio-data.json";
+
+import { Button } from "../ui/Button";
+import { HeroBackground } from "../ui/HeroBackground";
+import { Section } from "../ui/Section";
 
 export const Hero = () => {
   const { about, hero } = portfolioData;

@@ -1,12 +1,17 @@
 "use client";
 
-import React from "react";
 import { motion } from "framer-motion";
-import { Section } from "../ui/Section";
-import { Code2, Zap, Users, GitCommit, Linkedin, Heart } from "lucide-react";
-import { Counter } from "../ui/Counter";
+import { Code2, GitCommit, Heart,Linkedin, Users, Zap } from "lucide-react";
 import Image from "next/image";
-import portfolioData from "@/data/portfolio-data.json";
+import React from "react";
+
+import data from "@/data/portfolio-data.json";
+import { PortfolioData } from "@/types/portfolio";
+
+import { Counter } from "../ui/Counter";
+import { Section } from "../ui/Section";
+
+const portfolioData = data as PortfolioData;
 
 const BentoCard = ({
   children,
@@ -29,7 +34,7 @@ const BentoCard = ({
 );
 
 export const Highlights = () => {
-  const { about, projects, skills } = portfolioData;
+  const { about, projects, skills, education } = portfolioData;
 
   // Calculate years of experience (approximate from first job)
   const startYear = 2022; // Based on "September 2022" in data
@@ -150,7 +155,7 @@ export const Highlights = () => {
             </div>
             <div className="space-y-1 mt-auto">
               <p className="text-sm font-medium text-foreground">
-                University of San Carlos
+                {education[0].school}
               </p>
               <p className="text-sm text-muted-foreground">
                 {about.details.degree}

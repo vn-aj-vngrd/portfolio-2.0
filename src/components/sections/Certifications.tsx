@@ -1,11 +1,13 @@
 "use client";
 
-import React from "react";
-import { Section } from "../ui/Section";
-import { ExternalLink } from "lucide-react";
-import { Button } from "../ui/Button";
-import portfolioData from "@/data/portfolio-data.json";
 import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
+import React from "react";
+
+import portfolioData from "@/data/portfolio-data.json";
+
+import { Button } from "../ui/Button";
+import { Section } from "../ui/Section";
 
 const certifications = portfolioData.certifications;
 

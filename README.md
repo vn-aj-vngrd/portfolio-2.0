@@ -26,7 +26,8 @@ A high-performance, product-driven portfolio website built with Next.js 15, Tail
 ### Prerequisites
 
 - Node.js 18+
-- npm or yarn
+- Node.js 18+
+- Yarn
 
 ### Installation
 
@@ -40,16 +41,12 @@ A high-performance, product-driven portfolio website built with Next.js 15, Tail
 2.  Install dependencies:
 
     ```bash
-    npm install
-    # or
     yarn install
     ```
 
 3.  Run the development server:
 
     ```bash
-    npm run dev
-    # or
     yarn dev
     ```
 

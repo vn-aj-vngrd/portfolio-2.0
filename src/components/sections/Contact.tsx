@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import { Section } from "../ui/Section";
-import { Button } from "../ui/Button";
-
-import { ContactBackground } from "../ui/ContactBackground";
 
 import portfolioData from "@/data/portfolio-data.json";
+
+import { Button } from "../ui/Button";
+import { ContactBackground } from "../ui/ContactBackground";
+import { Section } from "../ui/Section";
 
 export const Contact = () => {
   const { email } = portfolioData.about.details;

@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground relative`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased text-foreground relative`}
       >
         <ThemeProvider
           attribute="class"

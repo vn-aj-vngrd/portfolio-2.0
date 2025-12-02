@@ -129,7 +129,7 @@ export const Header = () => {
                   <div className="flex items-center gap-4 md:hidden">
                     <ThemeToggle />
                     <button
-                      className="p-2 text-foreground"
+                      className="p-2 text-foreground cursor-pointer"
                       onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                       aria-label="Toggle menu"
                     >

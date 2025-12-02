@@ -144,15 +144,34 @@ export const Header = () => {
               {/* Progress Indicator */}
               <div className="flex gap-1.5 items-center">
                 {sectionIds.map((id) => (
-                  <motion.div
+                  <button
                     key={id}
-                    layout
-                    className={`h-1.5 rounded-full transition-colors duration-300 ${
-                      activeSection === id
-                        ? "w-4 bg-foreground"
-                        : "w-1.5 bg-muted-foreground/30"
-                    }`}
-                  />
+                    onClick={() => {
+                      const element = document.getElementById(id);
+                      if (element) {
+                        element.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }}
+                    className="p-1 cursor-pointer group"
+                    aria-label={`Scroll to ${getSectionTitle(id)}`}
+                  >
+                    <div className="relative flex items-center justify-center">
+                      <div className="absolute -top-10 opacity-0 scale-90 translate-y-2 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 transition-all duration-300 pointer-events-none z-50">
+                        <div className="bg-foreground text-background text-[10px] font-bold px-3 py-1.5 rounded-full shadow-xl whitespace-nowrap relative flex items-center justify-center">
+                          {getSectionTitle(id)}
+                          <div className="absolute -bottom-1 w-2 h-2 bg-foreground rotate-45" />
+                        </div>
+                      </div>
+                      <motion.div
+                        layout
+                        className={`h-1.5 rounded-full transition-all duration-300 ${
+                          activeSection === id
+                            ? "w-4 bg-foreground shadow-[0_0_8px_hsl(var(--foreground)/0.4)]"
+                            : "w-1.5 bg-muted-foreground/30 group-hover:bg-muted-foreground/50"
+                        }`}
+                      />
+                    </div>
+                  </button>
                 ))}
               </div>
 

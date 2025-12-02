@@ -4,6 +4,7 @@ import * as React from "react";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/Button";
+import { motion } from "framer-motion";
 
 export function ThemeToggle() {
   const { setTheme, resolvedTheme } = useTheme();
@@ -25,15 +26,42 @@ export function ThemeToggle() {
     );
   }
 
+  const isDark = resolvedTheme === "dark";
+
   return (
     <Button
       variant="ghost"
       size="icon"
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+      onClick={() => setTheme(isDark ? "light" : "dark")}
       className="rounded-full w-9 h-9"
     >
-      <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-      <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+      <div className="relative w-[1.2rem] h-[1.2rem]">
+        <motion.div
+          initial={false}
+          animate={{
+            scale: isDark ? 0 : 1,
+            rotate: isDark ? -90 : 0,
+            opacity: isDark ? 0 : 1,
+          }}
+          transition={{ type: "spring", stiffness: 200, damping: 15 }}
+          className="absolute inset-0"
+        >
+          <Sun className="w-full h-full" />
+        </motion.div>
+
+        <motion.div
+          initial={false}
+          animate={{
+            scale: isDark ? 1 : 0,
+            rotate: isDark ? 0 : 90,
+            opacity: isDark ? 1 : 0,
+          }}
+          transition={{ type: "spring", stiffness: 200, damping: 15 }}
+          className="absolute inset-0"
+        >
+          <Moon className="w-full h-full" />
+        </motion.div>
+      </div>
       <span className="sr-only">Toggle theme</span>
     </Button>
   );

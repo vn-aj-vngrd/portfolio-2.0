@@ -1,7 +1,9 @@
 import React from "react";
 import { Section } from "../ui/Section";
+import portfolioData from "@/data/portfolio-data.json";
 
 export const About = () => {
+  const { about } = portfolioData;
   return (
     <Section id="about">
       <div className="max-w-3xl mx-auto text-center space-y-8">
@@ -10,15 +12,11 @@ export const About = () => {
           and <span className="text-accent">engineering</span>.
         </h2>
         <div className="space-y-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
+          <p>{about.description}</p>
           <p>
-            With over 6 years of experience, I believe that the best products
-            are built at the intersection of robust technical architecture and
-            intuitive user experience.
-          </p>
-          <p>
-            Currently, I'm focused on building accessible design systems and
-            optimizing performance for high-traffic applications. I enjoy
-            solving complex problems with simple, maintainable code.
+            I hold a {about.details.degree} and I am currently based in{" "}
+            {about.details.address}. My passion lies in creating software
+            solutions using modern technologies.
           </p>
         </div>
       </div>

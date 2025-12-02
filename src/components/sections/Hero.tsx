@@ -5,8 +5,11 @@ import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
 import { Button } from "../ui/Button";
 import { Section } from "../ui/Section";
+import portfolioData from "@/data/portfolio-data.json";
 
 export const Hero = () => {
+  const { about } = portfolioData;
+
   return (
     <Section className="min-h-screen flex items-center pt-32 pb-16 justify-center text-center">
       <div className="max-w-4xl">
@@ -28,9 +31,8 @@ export const Hero = () => {
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed"
         >
-          I'm John Doe, a Senior Full-Stack Engineer based in San Francisco. I
-          specialize in building scalable web applications and accessible design
-          systems.
+          I'm {about.details.name}, a {about.title} based in{" "}
+          {about.details.address}. {about.description}
         </motion.p>
 
         <motion.div

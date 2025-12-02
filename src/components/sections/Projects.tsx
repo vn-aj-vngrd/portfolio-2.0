@@ -5,42 +5,18 @@ import { ExternalLink, Github } from "lucide-react";
 import { Section } from "../ui/Section";
 import { Button } from "../ui/Button";
 
-const projects = [
-  {
-    title: "E-commerce Dashboard Refactor",
-    description:
-      "Rebuilt the vendor dashboard for a major e-commerce platform, focusing on performance and accessibility. Migrated from a legacy SPA to Next.js.",
-    metrics: "Reduced TTI by 40% • 50k+ daily users • 98/100 Lighthouse",
-    tags: ["Next.js", "TypeScript", "GraphQL", "TanStack Query"],
-    links: {
-      demo: "https://example.com",
-      repo: "https://github.com",
-    },
+import portfolioData from "@/data/portfolio-data.json";
+
+const projects = portfolioData.projects.map((project) => ({
+  title: project.title,
+  description: project.description,
+  metrics: "View Project Details", // Placeholder as metrics are not in JSON
+  tags: project.tech,
+  links: {
+    demo: project.link,
+    repo: project.link, // Assuming repo link is same or not available separately
   },
-  {
-    title: "Cloud Infrastructure Monitor",
-    description:
-      "Real-time monitoring tool for distributed cloud systems. Implemented WebSocket connections for live data updates and D3.js for complex visualizations.",
-    metrics:
-      "Handles 10k+ events/sec • <50ms latency • Zero downtime deployment",
-    tags: ["React", "Node.js", "WebSockets", "D3.js", "Redis"],
-    links: {
-      demo: "https://example.com",
-      repo: "https://github.com",
-    },
-  },
-  {
-    title: "Design System Documentation",
-    description:
-      "Created a comprehensive documentation site for an internal design system. Features interactive component playgrounds and automated props table generation.",
-    metrics: "Used by 40+ engineers • Reduced onboarding time by 50%",
-    tags: ["Next.js", "MDX", "Tailwind CSS", "Storybook"],
-    links: {
-      demo: "https://example.com",
-      repo: "https://github.com",
-    },
-  },
-];
+}));
 
 import { motion } from "framer-motion";
 

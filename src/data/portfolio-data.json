@@ -1,0 +1,131 @@
+{
+    "about": {
+        "title": "About Me",
+        "description": "Hello, I am a full-stack developer specializing in the development of software solutions using JavaScript, TypeScript, PHP, and Python.",
+        "details": {
+            "name": "Van AJ Vanguardia",
+            "age": "23 years old",
+            "degree": "BS in Information Technology",
+            "email": "vanajvanguardia@gmail.com",
+            "address": "Cebu, Philippines"
+        }
+    },
+    "experience": [
+        {
+            "company": "Full Scale Teams PH",
+            "role": "Software Developer",
+            "dates": "July 2024 - Present",
+            "description": "Developing software solutions using ASP .NET Core, NextJS, Docker, MSSQL, GitHub, Slack, and Trello to collaborate with teams in writing, debugging, and testing code."
+        },
+        {
+            "company": "GigaBook Inc.",
+            "role": "Full Scale - Internship",
+            "dates": "September 2023 - January 2024",
+            "description": "Engaged in diverse training programs and assessment projects, utilizing technologies like ASP .NET Core, NextJS, Docker, MSSQL, GitHub, Slack, and Trello to collaborate with teams in writing, debugging, and testing code."
+        },
+        {
+            "company": "MYT SoftDev Solutions Inc.",
+            "role": "Module 0 - Internship",
+            "dates": "September 2022 - December 2022",
+            "description": "Engaged in developing different ERP systems, specializing in backend development, and trained to adapt to the current trend in the IT industry."
+        },
+        {
+            "company": "Summer Internship",
+            "role": "Astro Shipping Management Inc.",
+            "dates": "June 2022 - July 2022",
+            "description": "Created software that performs data migration to transfer data from an Excel file to the company's planned maintenance system."
+        }
+    ],
+    "education": [
+        {
+            "school": "University of Cebu",
+            "degree": "BS in Information Technology",
+            "dates": "2020 - 2024"
+        }
+    ],
+    "skills": [
+        "JavaScript",
+        "TypeScript",
+        "PHP",
+        "Python",
+        "React",
+        "NextJS",
+        "NodeJS",
+        "Express",
+        "TailwindCSS",
+        "MySQL",
+        "MongoDB",
+        "PostgreSQL",
+        "ASP .NET Core",
+        "Docker",
+        "MSSQL",
+        "GitHub",
+        "Slack",
+        "Trello",
+        "HTML5",
+        "CSS3",
+        "Git",
+        "Figma"
+    ],
+    "projects": [
+        {
+            "title": "Survey",
+            "description": "A survey platform",
+            "tech": [
+                "NextJS",
+                "TypeScript",
+                "TailwindCSS",
+                "PostgreSQL",
+                "Prisma"
+            ],
+            "link": "https://survey-beta-pied.vercel.app/"
+        },
+        {
+            "title": "Convo",
+            "description": "A real-time chat application",
+            "tech": [
+                "NextJS",
+                "TypeScript",
+                "TailwindCSS",
+                "MongoDB",
+                "Prisma"
+            ],
+            "link": "https://convo-beta-five.vercel.app/"
+        },
+        {
+            "title": "Unichem Store",
+            "description": "An e-commerce store",
+            "tech": [
+                "NextJS",
+                "TypeScript",
+                "TailwindCSS",
+                "MongoDB",
+                "Prisma"
+            ],
+            "link": "https://unichem-store.vercel.app/"
+        },
+        {
+            "title": "WatchBox",
+            "description": "A movie/TV show tracker",
+            "tech": [
+                "React",
+                "JavaScript",
+                "TailwindCSS",
+                "Firebase"
+            ],
+            "link": "https://watchbox-alpha.vercel.app/"
+        },
+        {
+            "title": "NextSched",
+            "description": "A scheduling application",
+            "tech": [
+                "NextJS",
+                "TypeScript",
+                "TailwindCSS",
+                "PostgreSQL",
+                "Prisma"
+            ],
+            "link": "https://nextsched-beta.vercel.app/"
+        }
+    ]
+}

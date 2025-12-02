@@ -4,38 +4,72 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Section } from "../ui/Section";
 
-const skills = {
-  Frontend: [
-    "React",
-    "Next.js",
+import portfolioData from "@/data/portfolio-data.json";
+
+const categorizeSkills = (skills: string[]) => {
+  const categories: Record<string, string[]> = {
+    Frontend: [],
+    Backend: [],
+    Database: [],
+    Tools: [],
+    Other: [],
+  };
+
+  const frontendSkills = [
+    "JavaScript",
     "TypeScript",
-    "Tailwind CSS",
-    "Framer Motion",
-    "GraphQL",
-    "Redux/Zustand",
-  ],
-  Backend: [
-    "Node.js",
-    "PostgreSQL",
-    "Redis",
-    "Serverless Functions",
-    "REST APIs",
-  ],
-  Tooling: [
-    "Git",
-    "Docker",
-    "AWS",
-    "CI/CD (GitHub Actions)",
-    "Jest/Vitest",
-    "Cypress",
-  ],
-  Design: [
+    "React",
+    "NextJS",
+    "TailwindCSS",
+    "HTML5",
+    "CSS3",
     "Figma",
-    "UI/UX Principles",
-    "Accessibility (WCAG)",
-    "Design Systems",
-  ],
+    "Redux",
+    "Zustand",
+    "GraphQL",
+  ];
+  const backendSkills = [
+    "PHP",
+    "Python",
+    "NodeJS",
+    "Express",
+    "ASP .NET Core",
+    "REST APIs",
+  ];
+  const databaseSkills = ["MySQL", "MongoDB", "PostgreSQL", "MSSQL", "Redis"];
+  const toolSkills = [
+    "Docker",
+    "GitHub",
+    "Git",
+    "Slack",
+    "Trello",
+    "AWS",
+    "CI/CD",
+    "Jest",
+    "Cypress",
+  ];
+
+  skills.forEach((skill) => {
+    if (frontendSkills.includes(skill)) {
+      categories.Frontend.push(skill);
+    } else if (backendSkills.includes(skill)) {
+      categories.Backend.push(skill);
+    } else if (databaseSkills.includes(skill)) {
+      categories.Database.push(skill);
+    } else if (toolSkills.includes(skill)) {
+      categories.Tools.push(skill);
+    } else {
+      categories.Other.push(skill);
+    }
+  });
+
+  // Remove empty categories
+  return Object.fromEntries(
+    Object.entries(categories).filter(([_, v]) => v.length > 0)
+  );
 };
+
+const skills = categorizeSkills(portfolioData.skills);
 
 export const Skills = () => {
   return (

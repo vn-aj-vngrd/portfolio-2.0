@@ -3,38 +3,14 @@
 import React from "react";
 import { Section } from "../ui/Section";
 
-const experience = [
-  {
-    role: "Senior Frontend Engineer",
-    company: "TechCorp",
-    period: "2022 - Present",
-    description: [
-      "Led the migration of the main marketing site to Next.js App Router, improving SEO and reducing build times by 60%.",
-      "Architected a shared component library used across 5 different product lines, ensuring UI consistency.",
-      "Mentored 3 junior developers and conducted weekly code review sessions.",
-    ],
-  },
-  {
-    role: "Frontend Engineer",
-    company: "StartupX",
-    period: "2020 - 2022",
-    description: [
-      "Developed key features for the flagship SaaS product using React and Redux.",
-      "Implemented a comprehensive end-to-end testing suite with Cypress, reducing regression bugs by 30%.",
-      "Collaborated closely with product designers to implement complex data visualizations.",
-    ],
-  },
-  {
-    role: "Web Developer",
-    company: "Creative Agency",
-    period: "2018 - 2020",
-    description: [
-      "Built responsive websites for diverse clients using modern HTML, CSS, and JavaScript.",
-      "Optimized site performance, achieving 90+ Lighthouse scores for all client projects.",
-      "Managed deployment pipelines and server configurations.",
-    ],
-  },
-];
+import portfolioData from "@/data/portfolio-data.json";
+
+const experience = portfolioData.experience.map((job) => ({
+  role: job.role,
+  company: job.company,
+  period: job.dates,
+  description: [job.description], // Wrap string in array to match component structure
+}));
 
 import { motion } from "framer-motion";
 

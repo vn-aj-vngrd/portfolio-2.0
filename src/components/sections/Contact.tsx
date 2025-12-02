@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-
 import portfolioData from "@/data/portfolio-data.json";
 
 import { Button } from "../ui/Button";

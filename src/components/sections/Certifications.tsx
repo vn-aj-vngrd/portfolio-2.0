@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
-import React from "react";
 
 import portfolioData from "@/data/portfolio-data.json";
 

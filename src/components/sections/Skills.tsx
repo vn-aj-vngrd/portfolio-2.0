@@ -9,7 +9,6 @@ import {
   Terminal,
   Users,
 } from "lucide-react";
-import React from "react";
 
 import portfolioData from "@/data/portfolio-data.json";
 

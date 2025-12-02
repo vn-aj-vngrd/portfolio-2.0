@@ -13,6 +13,12 @@ const eslintConfig = defineConfig([
       "simple-import-sort": simpleImportSort,
       "unused-imports": unusedImports,
     },
+    settings: {
+      react: {
+        version: "detect",
+        runtime: "automatic",
+      },
+    },
     rules: {
       "@typescript-eslint/no-explicit-any": "error",
       "@typescript-eslint/no-unused-vars": "off",

@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { Code2, GitCommit, Heart, Linkedin, Users, Zap } from "lucide-react";
 import Image from "next/image";
-import React from "react";
 
 import data from "@/data/portfolio-data.json";
 import { PortfolioData } from "@/types/portfolio";

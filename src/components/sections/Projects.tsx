@@ -1,7 +1,6 @@
 "use client";
 
 import { ArrowUpRight, Github } from "lucide-react";
-import React from "react";
 
 import portfolioData from "@/data/portfolio-data.json";
 

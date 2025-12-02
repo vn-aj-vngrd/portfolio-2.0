@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
-import React from "react";
 
 import portfolioData from "@/data/portfolio-data.json";
 

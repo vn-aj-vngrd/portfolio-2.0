@@ -47,8 +47,8 @@ export const Hero = () => {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Button size="lg" className="h-14 px-8 text-lg" asChild>
-            <a href="#projects">
-              View Projects <ArrowRight className="h-5 w-5" />
+            <a href="/resume.pdf" target="_blank">
+              Download Resume <Download className="h-5 w-5" />
             </a>
           </Button>
           <Button
@@ -57,8 +57,8 @@ export const Hero = () => {
             className="h-14 px-8 text-lg bg-background/50 backdrop-blur-sm"
             asChild
           >
-            <a href="/resume.pdf" target="_blank">
-              Download Resume <Download className="h-5 w-5" />
+            <a href="#experience">
+              Experience <ArrowRight className="h-5 w-5" />
             </a>
           </Button>
         </motion.div>

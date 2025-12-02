@@ -106,7 +106,7 @@ export const Highlights = () => {
               </div>
               <div className="space-y-1 pt-2 border-t border-emerald-100 dark:border-emerald-900/50">
                 <span className="text-3xl font-bold text-emerald-600 dark:text-emerald-400 flex items-center">
-                  <Counter value={60} />+
+                  <Counter value={about.details.publicRepositories} />+
                 </span>
                 <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">
                   Public Repositories

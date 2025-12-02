@@ -198,7 +198,12 @@
     ],
     "certifications": [
         {
-            "title": "Full Scale - Certificate of Completion",
+            "title": "Hackfest 2024: Fusion Finalist (Top 10)",
+            "issuer": "Google Developer Student Club",
+            "link": "#"
+        },
+        {
+            "title": "Full Scale Internship - Certificate of Completion",
             "issuer": "GigaBook Inc.",
             "link": "/certificates/fs-coc.pdf"
         },

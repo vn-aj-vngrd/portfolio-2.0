@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Section } from "../ui/Section";
 import { Code2, Globe, Zap, Layout, Users, GitCommit } from "lucide-react";
+import { Counter } from "../ui/Counter";
 import portfolioData from "@/data/portfolio-data.json";
 
 const BentoCard = ({
@@ -67,7 +68,6 @@ export const Highlights = () => {
             </div>
           </div>
         </BentoCard>
-
         {/* Small Card: Experience */}
         <BentoCard
           delay={0.1}
@@ -76,8 +76,8 @@ export const Highlights = () => {
           <div className="flex flex-col h-full justify-between">
             <div className="flex justify-between items-start">
               <Zap className="text-green-600" size={28} />
-              <span className="text-4xl font-bold text-green-600">
-                {yearsOfExperience}+
+              <span className="text-4xl font-bold text-green-600 flex items-center">
+                <Counter value={yearsOfExperience} />+
               </span>
             </div>
             <div>
@@ -88,7 +88,6 @@ export const Highlights = () => {
             </div>
           </div>
         </BentoCard>
-
         {/* Small Card: Projects */}
         <BentoCard
           delay={0.2}
@@ -98,7 +97,7 @@ export const Highlights = () => {
             <Globe className="text-orange-500" size={28} />
             <div className="flex justify-between items-start">
               <span className="text-4xl font-bold text-orange-600">
-                {projects.length}
+                <Counter value={projects.length} />
               </span>
             </div>
             <div>
@@ -109,7 +108,6 @@ export const Highlights = () => {
             </div>
           </div>
         </BentoCard>
-
         {/* Medium Card: Education */}
         <BentoCard
           delay={0.3}
@@ -125,7 +123,6 @@ export const Highlights = () => {
             </div>
           </div>
         </BentoCard>
-
         {/* Medium Card: Location & Contact */}
         <BentoCard
           delay={0.4}

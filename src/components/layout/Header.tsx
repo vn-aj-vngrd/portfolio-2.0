@@ -161,7 +161,7 @@ export const Header = () => {
               <div className="flex items-center gap-1">
                 <button
                   onClick={scrollToTop}
-                  className="p-2 hover:bg-muted rounded-full transition-colors text-muted-foreground hover:text-foreground"
+                  className="p-2 hover:bg-muted rounded-full transition-colors text-muted-foreground hover:text-foreground cursor-pointer"
                   aria-label="Back to top"
                 >
                   <ArrowUp size={16} />
@@ -180,6 +180,7 @@ export const Header = () => {
                 >
                   <Mail size={16} />
                 </Link>
+                <ThemeToggle compact />
               </div>
             </motion.div>
           )}

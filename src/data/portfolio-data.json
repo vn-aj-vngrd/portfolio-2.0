@@ -1,11 +1,11 @@
 {
     "hero": {
-        "summary": "Specializing in building scalable, high-performance web applications using the JavaScript ecosystem, .NET, and Python."
+        "summary": "Specializing in building scalable, high-performance web applications using the JavaScript ecosystem, .NET, and PHP."
     },
     "about": {
         "title": "About Me",
         "role": "Full Stack Developer",
-        "description": "I am a passionate Full-Stack Developer dedicated to building scalable, high-performance web applications. With a strong foundation in the JavaScript ecosystem and experience in .NET and Python, I enjoy solving complex problems and creating intuitive user experiences. I thrive in collaborative Agile environments and am constantly learning new technologies to stay ahead of industry trends.",
+        "description": "I am a passionate Full-Stack Developer dedicated to building scalable, high-performance web applications. With a strong foundation in the JavaScript ecosystem and experience in .NET and PHP, I enjoy solving complex problems and creating intuitive user experiences. I thrive in collaborative Agile environments and am constantly learning new technologies to stay ahead of industry trends.",
         "details": {
             "name": "Van AJ Vanguardia",
             "age": "23",

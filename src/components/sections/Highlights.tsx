@@ -26,7 +26,7 @@ const BentoCard = ({
   </motion.div>
 );
 
-export const BentoGrid = () => {
+export const Highlights = () => {
   const { about, projects, skills, experience } = portfolioData;
 
   // Calculate years of experience (approximate from first job)

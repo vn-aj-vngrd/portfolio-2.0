@@ -16,11 +16,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Van AJ Vanguardia | Full-Stack Engineer",
+  title: "Van AJ Vanguardia | Software Developer",
   description:
-    "Full-Stack Engineer specializing in scalable web applications, design systems, and performance optimization.",
+    "Software Developer specializing in scalable web applications, design systems, and performance optimization.",
   openGraph: {
-    title: "Van AJ Vanguardia | Full-Stack Engineer",
+    title: "Van AJ Vanguardia | Software Developer",
     description: "Building high-performance web applications.",
     type: "website",
   },

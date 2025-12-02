@@ -5,6 +5,20 @@ import portfolioData from "@/data/portfolio-data.json";
 
 export const About = () => {
   const { about } = portfolioData;
+
+  const calculateAge = (birthdate: string) => {
+    const birthDate = new Date(birthdate);
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    return age;
+  };
+
+  const age = calculateAge(about.details.birthdate);
+
   return (
     <Section id="about" className="relative overflow-hidden">
       <AboutBackground />
@@ -16,9 +30,9 @@ export const About = () => {
         <div className="space-y-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
           <p>{about.description}</p>
           <p>
-            I hold a {about.details.degree} and I am currently based in{" "}
-            {about.details.address}. My passion lies in creating software
-            solutions using modern technologies.
+            I am {age} years old, hold a {about.details.degree}, and I am
+            currently based in {about.details.address}. My passion lies in
+            creating software solutions using modern technologies.
           </p>
         </div>
       </div>

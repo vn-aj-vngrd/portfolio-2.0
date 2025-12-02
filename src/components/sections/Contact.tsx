@@ -6,7 +6,11 @@ import { Button } from "../ui/Button";
 
 import { ContactBackground } from "../ui/ContactBackground";
 
+import portfolioData from "@/data/portfolio-data.json";
+
 export const Contact = () => {
+  const { email } = portfolioData.about.details;
+
   return (
     <Section id="contact" className="relative overflow-hidden">
       <ContactBackground />
@@ -44,7 +48,7 @@ export const Contact = () => {
                 type="email"
                 id="email"
                 className="w-full px-4 py-3 rounded-xl border-0 bg-muted/50 focus:bg-background focus:ring-2 focus:ring-accent/20 transition-all outline-none"
-                placeholder="vanajvanguardia@gmail.com"
+                placeholder={email}
               />
             </div>
           </div>
@@ -72,10 +76,10 @@ export const Contact = () => {
               Or email me directly at
             </span>
             <a
-              href="mailto:vanajvanguardia@gmail.com"
+              href={`mailto:${email}`}
               className="text-accent font-semibold hover:underline"
             >
-              vanajvanguardia@gmail.com
+              {email}
             </a>
           </div>
         </div>

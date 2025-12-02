@@ -14,7 +14,6 @@ import { ThemeToggle } from "../ui/ThemeToggle";
 import { useActiveSection } from "@/hooks/useActiveSection";
 
 const navItems = [
-  { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
@@ -22,7 +21,6 @@ const navItems = [
 
 const sectionIds = [
   "hero",
-  "about",
   "highlights",
   "projects",
   "experience",

@@ -11,6 +11,7 @@ import {
   Users,
   GitCommit,
   Linkedin,
+  Heart,
 } from "lucide-react";
 import { Counter } from "../ui/Counter";
 import Image from "next/image";
@@ -66,16 +67,6 @@ export const Highlights = () => {
                 <p className="text-lg text-muted-foreground max-w-md">
                   {about.description}
                 </p>
-              </div>
-              <div className="flex flex-wrap gap-3 mt-8">
-                {topSkills.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1 bg-white/50 dark:bg-black/20 rounded-full text-sm font-medium border border-black/5 dark:border-white/5"
-                  >
-                    {tag}
-                  </span>
-                ))}
               </div>
             </div>
             <div className="relative min-h-[300px] md:min-h-0 md:h-full md:w-2/5 order-1 md:order-2">
@@ -137,29 +128,16 @@ export const Highlights = () => {
           <div className="flex flex-col h-full gap-4">
             <div className="flex items-center gap-2">
               <Code2 className="w-5 h-5 text-orange-600 dark:text-orange-400" />
-              <h4 className="font-semibold text-lg">Stack Overview</h4>
+              <h4 className="font-semibold text-lg">Top Stack</h4>
             </div>
-            <div className="space-y-3 mt-auto">
-              {Object.entries(skills).map(([category, items]) => (
-                <div
-                  key={category}
-                  className="flex justify-between items-center text-sm group"
+            <div className="flex flex-wrap gap-2 mt-auto">
+              {portfolioData.topStack.map((tech) => (
+                <span
+                  key={tech.name}
+                  className="px-3 py-1.5 bg-orange-100/50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 rounded-lg text-sm font-medium border border-orange-200/50 dark:border-orange-800/30"
                 >
-                  <span className="text-muted-foreground group-hover:text-foreground transition-colors">
-                    {category}
-                  </span>
-                  <div className="flex items-center gap-2">
-                    <div className="h-1.5 w-16 bg-orange-100 dark:bg-orange-900/30 rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-orange-500 dark:bg-orange-400 rounded-full"
-                        style={{ width: `${(items.length / 10) * 100}%` }} // Approximate scale
-                      />
-                    </div>
-                    <span className="font-bold text-orange-700 dark:text-orange-400 w-4 text-right">
-                      {items.length}
-                    </span>
-                  </div>
-                </div>
+                  {tech.name}
+                </span>
               ))}
             </div>
           </div>
@@ -167,7 +145,7 @@ export const Highlights = () => {
         {/* Medium Card: Education */}
         <BentoCard
           delay={0.3}
-          className="md:col-span-1 bg-gradient-to-br from-purple-50 to-pink-50"
+          className="md:col-span-1 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20"
         >
           <div className="flex flex-col h-full justify-between">
             <Code2 className="text-purple-500" size={28} />
@@ -184,42 +162,66 @@ export const Highlights = () => {
             </div>
           </div>
         </BentoCard>
+
+        {/* Hobbies Card */}
+        <BentoCard
+          delay={0.35}
+          className="md:col-span-1 bg-gradient-to-br from-rose-50 to-red-50 dark:from-rose-900/20 dark:to-red-900/20"
+        >
+          <div className="flex flex-col h-full justify-between">
+            <Heart className="text-rose-500" size={28} />
+            <div>
+              <h4 className="font-semibold text-lg mb-2">Interests</h4>
+              <div className="flex flex-wrap gap-2">
+                {about.hobbies.map((hobby) => (
+                  <span
+                    key={hobby}
+                    className="px-2 py-1 bg-white/50 dark:bg-black/20 rounded-md text-xs font-medium text-muted-foreground border border-black/5 dark:border-white/5"
+                  >
+                    {hobby}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </BentoCard>
+
         {/* Medium Card: Location & Contact */}
         <BentoCard
           delay={0.4}
-          className="md:col-span-2 bg-gradient-to-br from-gray-50 to-slate-100"
+          className="md:col-span-1 bg-gradient-to-br from-gray-50 to-slate-100 dark:from-gray-900/20 dark:to-slate-900/20"
         >
-          <div className="flex flex-row items-center justify-between h-full gap-8">
-            <div className="flex flex-col justify-between h-full">
-              <Users className="text-gray-700" size={28} />
-              <div>
-                <h4 className="font-semibold text-lg">
-                  Based in {about.details.address}
-                </h4>
-                <p className="text-sm text-muted-foreground max-w-sm">
-                  Open to opportunities. Contact me at {about.details.email}.
-                </p>
+          <div className="flex flex-col h-full justify-between">
+            <div className="flex justify-between items-start">
+              <Users className="text-gray-700 dark:text-gray-400" size={28} />
+              <div className="flex gap-2">
+                <a
+                  href={about.details.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 bg-white dark:bg-white/5 rounded-xl shadow-sm border border-black/5 dark:border-white/5 hover:scale-110 transition-all duration-300 group"
+                  aria-label="GitHub"
+                >
+                  <GitCommit className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors" />
+                </a>
+                <a
+                  href={about.details.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 bg-white dark:bg-white/5 rounded-xl shadow-sm border border-black/5 dark:border-white/5 hover:scale-110 transition-all duration-300 group"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-4 h-4 text-muted-foreground group-hover:text-blue-600 transition-colors" />
+                </a>
               </div>
             </div>
-            <div className="hidden md:flex gap-3 items-center">
-              <a
-                href={about.details.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-4 bg-white dark:bg-white/5 rounded-2xl shadow-sm border border-black/5 dark:border-white/5 hover:scale-110 hover:rotate-3 transition-all duration-300 group"
-                aria-label="GitHub Profile"
-              >
-                <GitCommit className="text-muted-foreground group-hover:text-foreground transition-colors" />
-              </a>
-              <a
-                href={about.details.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-4 bg-white dark:bg-white/5 rounded-2xl shadow-sm border border-black/5 dark:border-white/5 hover:scale-110 hover:-rotate-3 transition-all duration-300 group"
-                aria-label="LinkedIn Profile"
-              >
-                <Linkedin className="text-muted-foreground group-hover:text-blue-600 transition-colors" />
-              </a>
+            <div>
+              <h4 className="font-semibold text-lg">
+                Based in {about.details.address}
+              </h4>
+              <p className="text-sm text-muted-foreground">
+                Open to opportunities.
+              </p>
             </div>
           </div>
         </BentoCard>

@@ -15,7 +15,15 @@
             "availability": "Open to Opportunities",
             "linkedin": "https://www.linkedin.com/in/van-aj-vanguardia-a0654a223/",
             "github": "https://github.com/vn-aj-vngrd"
-        }
+        },
+        "hobbies": [
+            "Music",
+            "Basketball",
+            "Mobile Legends",
+            "Travelling",
+            "Jogging",
+            "Nature"
+        ]
     },
     "experience": [
         {
@@ -153,6 +161,29 @@
             "Critical Thinking"
         ]
     },
+    "topStack": [
+        {
+            "name": "Next.js"
+        },
+        {
+            "name": "ASP.NET Core"
+        },
+        {
+            "name": "Laravel"
+        },
+        {
+            "name": "Docker"
+        },
+        {
+            "name": "AWS"
+        },
+        {
+            "name": "Azure"
+        },
+        {
+            "name": "PostgreSQL"
+        }
+    ],
     "projects": [
         {
             "title": "WatchBox",

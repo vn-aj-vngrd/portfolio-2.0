@@ -32,6 +32,7 @@ export const Projects = () => {
       >
         Featured Projects
       </motion.h2>
+
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <motion.div
@@ -117,6 +118,28 @@ export const Projects = () => {
           </motion.div>
         ))}
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="mt-16 relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent/5 via-background to-accent/5 border border-accent/10 p-8 md:p-12 text-center"
+      >
+        <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
+        <div className="relative z-10 flex flex-col items-center gap-4">
+          <div className="p-3 rounded-full bg-accent/10 text-accent mb-2">
+            <ArrowUpRight className="w-6 h-6" />
+          </div>
+          <h3 className="text-2xl font-semibold tracking-tight">
+            More Projects in the Works
+          </h3>
+          <p className="text-muted-foreground max-w-md mx-auto text-lg">
+            I'm constantly building and experimenting. Stay tuned for more cool
+            projects coming soon! 🚀
+          </p>
+        </div>
+      </motion.div>
     </Section>
   );
 };

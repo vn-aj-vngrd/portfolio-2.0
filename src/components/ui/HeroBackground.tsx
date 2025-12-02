@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export const TechBackground = () => {
+export const HeroBackground = () => {
   return (
     <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none h-full w-full">
       {/* Grid Pattern - Adaptive Colors */}

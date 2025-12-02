@@ -1,11 +1,13 @@
 import React from "react";
 import { Section } from "../ui/Section";
+import { AboutBackground } from "../ui/AboutBackground";
 import portfolioData from "@/data/portfolio-data.json";
 
 export const About = () => {
   const { about } = portfolioData;
   return (
-    <Section id="about">
+    <Section id="about" className="relative overflow-hidden">
+      <AboutBackground />
       <div className="max-w-3xl mx-auto text-center space-y-8">
         <h2 className="text-3xl md:text-4xl font-semibold leading-tight tracking-tight text-foreground">
           I bridge the gap between <span className="text-accent">design</span>{" "}

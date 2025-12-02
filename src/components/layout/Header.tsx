@@ -6,7 +6,7 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
-import { ArrowUp, Mail,Menu, X } from "lucide-react";
+import { ArrowUp, Mail, Menu, X } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";
 

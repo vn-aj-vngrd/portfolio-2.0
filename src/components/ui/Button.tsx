@@ -1,5 +1,5 @@
 import { Slot } from "@radix-ui/react-slot";
-import { type ClassValue,clsx } from "clsx";
+import { type ClassValue, clsx } from "clsx";
 import React from "react";
 import { twMerge } from "tailwind-merge";
 

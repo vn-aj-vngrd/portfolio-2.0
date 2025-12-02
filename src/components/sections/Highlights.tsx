@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, GitCommit, Heart,Linkedin, Users, Zap } from "lucide-react";
+import { Code2, GitCommit, Heart, Linkedin, Users, Zap } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 

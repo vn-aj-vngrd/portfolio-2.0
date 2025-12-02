@@ -29,6 +29,8 @@ const eslintConfig = defineConfig([
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
       "no-console": ["warn", { allow: ["warn", "error"] }],
+      "react/jsx-uses-react": "off",
+      "react/react-in-jsx-scope": "off",
     },
   },
   prettierConfig,

@@ -66,24 +66,46 @@
             "dates": "2020 - 2024"
         }
     ],
-    "skills": [
-        "JavaScript (ES6+)",
-        "TypeScript",
-        "React.js",
-        "Next.js",
-        "Node.js",
-        "ASP.NET Core",
-        "Python",
-        "Tailwind CSS",
-        "PostgreSQL",
-        "MongoDB",
-        "MSSQL",
-        "Docker",
-        "Git & GitHub",
-        "Prisma ORM",
-        "Figma",
-        "Agile/Scrum"
-    ],
+    "skills": {
+        "Frontend": [
+            "JavaScript (ES6+)",
+            "TypeScript",
+            "React.js",
+            "Next.js",
+            "Tailwind CSS",
+            "HTML5",
+            "CSS3",
+            "Figma",
+            "Redux",
+            "Zustand"
+        ],
+        "Backend": [
+            "Node.js",
+            "Express",
+            "ASP.NET Core",
+            "PHP",
+            "Python",
+            "REST APIs",
+            "GraphQL"
+        ],
+        "Database": [
+            "PostgreSQL",
+            "MongoDB",
+            "MSSQL",
+            "MySQL",
+            "Redis",
+            "Prisma ORM"
+        ],
+        "Tools & DevOps": [
+            "Docker",
+            "Git & GitHub",
+            "AWS",
+            "CI/CD",
+            "Jest",
+            "Cypress",
+            "Agile/Scrum"
+        ]
+    },
     "projects": [
         {
             "title": "Survey Platform",

@@ -35,8 +35,9 @@ export const Highlights = () => {
   const currentYear = new Date().getFullYear();
   const yearsOfExperience = currentYear - startYear;
 
-  // Get top skills for the main card
-  const topSkills = skills.slice(0, 4);
+  // Get top skills for the main card (flatten the object and take first 4)
+  const allSkills = Object.values(skills).flat();
+  const topSkills = allSkills.slice(0, 4);
 
   return (
     <Section id="highlights">

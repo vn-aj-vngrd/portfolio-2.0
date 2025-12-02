@@ -6,73 +6,7 @@ import { Section } from "../ui/Section";
 
 import portfolioData from "@/data/portfolio-data.json";
 
-const categorizeSkills = (skills: string[]) => {
-  const categories: Record<string, string[]> = {
-    Frontend: [],
-    Backend: [],
-    Database: [],
-    Tools: [],
-    Other: [],
-  };
-
-  const frontendSkills = [
-    "JavaScript (ES6+)",
-    "TypeScript",
-    "React.js",
-    "Next.js",
-    "Tailwind CSS",
-    "HTML5",
-    "CSS3",
-    "Figma",
-    "Redux",
-    "Zustand",
-    "GraphQL",
-  ];
-  const backendSkills = [
-    "PHP",
-    "Python",
-    "Node.js",
-    "Express",
-    "ASP.NET Core",
-    "REST APIs",
-    "Prisma ORM",
-  ];
-  const databaseSkills = ["MySQL", "MongoDB", "PostgreSQL", "MSSQL", "Redis"];
-  const toolSkills = [
-    "Docker",
-    "Git & GitHub",
-    "Git",
-    "GitHub",
-    "Slack",
-    "Trello",
-    "AWS",
-    "CI/CD",
-    "Jest",
-    "Cypress",
-    "Agile/Scrum",
-  ];
-
-  skills.forEach((skill) => {
-    if (frontendSkills.includes(skill)) {
-      categories.Frontend.push(skill);
-    } else if (backendSkills.includes(skill)) {
-      categories.Backend.push(skill);
-    } else if (databaseSkills.includes(skill)) {
-      categories.Database.push(skill);
-    } else if (toolSkills.includes(skill)) {
-      categories.Tools.push(skill);
-    } else {
-      categories.Other.push(skill);
-    }
-  });
-
-  // Remove empty categories
-  return Object.fromEntries(
-    Object.entries(categories).filter(([_, v]) => v.length > 0)
-  );
-};
-
-const skills = categorizeSkills(portfolioData.skills);
+const skills = portfolioData.skills;
 
 export const Skills = () => {
   return (

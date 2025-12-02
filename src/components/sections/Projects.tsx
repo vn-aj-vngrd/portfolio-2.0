@@ -72,7 +72,7 @@ export const Projects = () => {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 bg-muted/50 border border-border/50 text-xs font-medium rounded-full text-muted-foreground"
+                      className="px-2.5 py-1 bg-background/40 border border-border/40 rounded-full text-xs font-medium text-muted-foreground hover:text-foreground hover:border-accent/40 hover:bg-accent/5 hover:scale-105 transition-all duration-300 cursor-default backdrop-blur-sm"
                     >
                       {tag}
                     </span>

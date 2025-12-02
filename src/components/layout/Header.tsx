@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "../ui/Button";
+import { ThemeToggle } from "../ui/ThemeToggle";
 
 const navItems = [
   { label: "Work", href: "#projects" },
@@ -41,7 +42,7 @@ export const Header = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -51,6 +52,7 @@ export const Header = () => {
               {item.label}
             </Link>
           ))}
+          <ThemeToggle />
           <Button variant="primary" size="sm" asChild>
             <Link href="/resume.pdf" target="_blank">
               Resume
@@ -59,13 +61,16 @@ export const Header = () => {
         </nav>
 
         {/* Mobile Menu Toggle */}
-        <button
-          className="md:hidden p-2 text-foreground"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex items-center gap-4 md:hidden">
+          <ThemeToggle />
+          <button
+            className="p-2 text-foreground"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Nav Overlay */}

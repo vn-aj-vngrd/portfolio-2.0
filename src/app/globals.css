@@ -12,6 +12,18 @@
   --card-foreground: #1d1d1f;
 }
 
+.dark {
+  --background: #000000;
+  --foreground: #f5f5f7;
+  --accent: #0a84ff; /* Brighter Apple Blue for Dark Mode */
+  --accent-foreground: #ffffff;
+  --muted: #1c1c1e;
+  --muted-foreground: #a1a1a6;
+  --border: #38383a;
+  --card: #1c1c1e;
+  --card-foreground: #f5f5f7;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -62,6 +74,21 @@ body {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(0, 0, 0, 0.04);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+
+:is(.dark .glass) {
+  background: rgba(28, 28, 30, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+:is(.dark .glass-card) {
+  background: rgba(30, 30, 32, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 /* Subtle Gradient Background Animation */

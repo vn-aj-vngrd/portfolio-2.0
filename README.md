@@ -1,21 +1,32 @@
-# Modern Minimal Portfolio
+# Van AJ Vanguardia - Portfolio 2.0
 
-A high-performance, accessible, and minimal portfolio website built with Next.js 15, Tailwind CSS v4, and TypeScript.
+A high-performance, product-driven portfolio website built with Next.js 15, Tailwind CSS, and TypeScript. This project showcases my work as a Full Stack Developer, featuring a modern bento-grid layout, smooth animations, and a focus on user experience.
 
 ## Features
 
-- **Minimal Design**: Clean aesthetic with a focus on typography and content.
-- **Performance**: Optimized for speed with Next.js App Router and Server Components.
-- **Accessibility**: Semantic HTML, keyboard navigation, and visible focus states.
-- **Responsive**: Fully responsive layout from mobile to desktop.
-- **SEO**: Meta tags, OpenGraph support, and semantic structure.
+- **Modern Design**: Bento-grid layout inspired by modern design trends.
+- **Dark Mode**: Fully supported dark mode with a toggle switch.
+- **Animations**: Smooth transitions and scroll animations using Framer Motion.
+- **Dynamic Content**: All content (experience, projects, skills, etc.) is managed via a single JSON file.
+- **Responsive**: Fully responsive layout optimized for all devices.
+- **SEO Optimized**: Comprehensive metadata and Open Graph support.
+- **Performance**: Built on Next.js App Router for optimal speed and SEO.
+
+## Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Font**: [Geist](https://vercel.com/font)
 
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js 18+
-- npm
+- npm or yarn
 
 ### Installation
 
@@ -23,38 +34,42 @@ A high-performance, accessible, and minimal portfolio website built with Next.js
 
     ```bash
     git clone <repository-url>
-    cd portfolio
+    cd portfolio-2.0
     ```
 
 2.  Install dependencies:
 
     ```bash
     npm install
+    # or
+    yarn install
     ```
 
 3.  Run the development server:
 
     ```bash
     npm run dev
+    # or
+    yarn dev
     ```
 
     Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Customization
 
-### Content
+All portfolio data is centralized in `src/data/portfolio-data.json`. You can easily update your information without touching the component code.
 
-- **Personal Info**: Update `src/components/sections/Hero.tsx` and `src/components/sections/About.tsx`.
-- **Projects**: Edit the `projects` array in `src/components/sections/Projects.tsx`.
-- **Experience**: Edit the `experience` array in `src/components/sections/Experience.tsx`.
-- **Skills**: Edit the `skills` object in `src/components/sections/Skills.tsx`.
-- **Contact**: Update the email in `src/components/sections/Contact.tsx` and `src/components/layout/Footer.tsx`.
+- **Personal Info**: Update `about` section.
+- **Experience**: Update `experience` array.
+- **Projects**: Update `projects` array.
+- **Skills**: Update `skills` object.
+- **Top Stack**: Update `topStack` array for the highlights section.
+- **Hobbies**: Update `hobbies` array.
 
 ### Styling
 
 - **Colors**: Modify CSS variables in `src/app/globals.css`.
-  - `--accent`: Change this to your preferred accent color.
-- **Fonts**: The site uses `Geist Sans` and `Geist Mono` by default. You can change this in `src/app/layout.tsx`.
+- **Theme**: The theme toggle is handled in `src/components/ui/ThemeToggle.tsx`.
 
 ## Deployment
 

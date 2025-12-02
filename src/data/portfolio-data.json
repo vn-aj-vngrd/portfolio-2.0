@@ -21,10 +21,13 @@
             "role": "Software Developer",
             "dates": "July 2024 - Present",
             "description": [
-                "Architect and implement scalable features using ASP.NET Core and Next.js.",
-                "Containerize applications with Docker for consistent deployment environments.",
-                "Optimize database interactions with MSSQL to improve performance.",
-                "Collaborate in an Agile environment using Jira/Trello to deliver high-quality code."
+                "Architected and implemented scalable full-stack solutions using ASP.NET Core and React.",
+                "Delivered a custom Salesforce application to streamline business operations.",
+                "Optimized MSSQL database performance and external API integrations, reducing system latency.",
+                "Containerized applications using Docker to ensure consistent deployment environments.",
+                "Implemented WCAG accessibility standards, improving application inclusivity and user experience.",
+                "Integrated AI-driven workflows to accelerate development cycles and enhance code quality.",
+                "Collaborated in an Agile environment to deliver high-quality code using Jira and Trello."
             ]
         },
         {

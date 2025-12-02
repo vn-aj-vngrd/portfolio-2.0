@@ -121,7 +121,13 @@
       "Redux",
       "Zustand"
     ],
-    "Backend": ["Node.js", "Express", "ASP.NET Core", "Laravel", "REST APIs"],
+    "Backend": [
+      "Node.js",
+      "Express",
+      "ASP.NET Core",
+      "Laravel",
+      "REST APIs"
+    ],
     "Database": [
       "PostgreSQL",
       "MongoDB",
@@ -201,21 +207,35 @@
     {
       "title": "NextSched",
       "description": "An intuitive scheduling application for managing appointments and events. Features a drag-and-drop calendar interface, automated reminders, and conflict detection.",
-      "tech": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma"],
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "Prisma"
+      ],
       "link": "https://nextsched-beta.vercel.app/",
       "code": "https://github.com/vn-aj-vngrd/next-sched"
     },
     {
       "title": "Astro Foundation Landing Page",
       "description": "A landing page for the Astro Foundation, a non-profit organization that provides scholarships and resources to underprivileged students.",
-      "tech": ["Next.js", "TypeScript", "Tailwind CSS", "Vercel", "Sanity"],
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Vercel",
+        "Sanity",
+        "Docker",
+        "Nginx"
+      ],
       "link": "https://astrofoundation.vercel.app/",
       "code": "https://github.com/vn-aj-vngrd/astrofoundation"
     }
   ],
   "certifications": [
     {
-      "title": "Hackfest 2024: Fusion Finalist (Top 10)",
+      "title": "Hackfest 2024: Fusion Finalist",
       "issuer": "Google Developer Student Club",
       "link": "#"
     },

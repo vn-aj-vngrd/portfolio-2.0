@@ -203,7 +203,7 @@ export const Highlights = () => {
             </div>
             <div className="hidden md:flex gap-3 items-center">
               <a
-                href="https://github.com/vanajvanguardia"
+                href={about.details.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-4 bg-white dark:bg-white/5 rounded-2xl shadow-sm border border-black/5 dark:border-white/5 hover:scale-110 hover:rotate-3 transition-all duration-300 group"
@@ -212,7 +212,7 @@ export const Highlights = () => {
                 <GitCommit className="text-muted-foreground group-hover:text-foreground transition-colors" />
               </a>
               <a
-                href="https://linkedin.com/in/vanajvanguardia"
+                href={about.details.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-4 bg-white dark:bg-white/5 rounded-2xl shadow-sm border border-black/5 dark:border-white/5 hover:scale-110 hover:-rotate-3 transition-all duration-300 group"

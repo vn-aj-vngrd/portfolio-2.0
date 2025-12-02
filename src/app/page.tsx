@@ -4,6 +4,7 @@ import { BentoGrid } from "@/components/sections/BentoGrid";
 import { Projects } from "@/components/sections/Projects";
 import { Experience } from "@/components/sections/Experience";
 import { Skills } from "@/components/sections/Skills";
+import { Certifications } from "@/components/sections/Certifications";
 import { Contact } from "@/components/sections/Contact";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Projects />
       <Experience />
       <Skills />
+      <Certifications />
       <Contact />
     </main>
   );

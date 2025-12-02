@@ -31,7 +31,7 @@ export const Hero = () => {
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed"
         >
-          I'm {about.details.name}, a {about.role} based in{" "}
+          I&apos;m {about.details.name}, a {about.role} based in{" "}
           {about.details.address}. {hero.summary}
         </motion.p>
 

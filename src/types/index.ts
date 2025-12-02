@@ -32,10 +32,17 @@ export interface About {
   details: AboutDetails;
 }
 
+export interface Certification {
+  title: string;
+  issuer: string;
+  link: string;
+}
+
 export interface PortfolioData {
   about: About;
   experience: Experience[];
   education: Education[];
   skills: string[];
   projects: Project[];
+  certifications: Certification[];
 }

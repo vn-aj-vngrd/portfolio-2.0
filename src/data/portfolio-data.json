@@ -144,5 +144,47 @@
             ],
             "link": "https://nextsched-beta.vercel.app/"
         }
+    ],
+    "certifications": [
+        {
+            "title": "Full Scale - Certificate of Completion",
+            "issuer": "GigaBook Inc.",
+            "link": "#"
+        },
+        {
+            "title": "GDSC San Carlos - Certificate of Membership",
+            "issuer": "GDSC San Carlos",
+            "link": "#"
+        },
+        {
+            "title": "Software Testing in a Nutshell",
+            "issuer": "University of San Carlos",
+            "link": "#"
+        },
+        {
+            "title": "Startup Summit 2022",
+            "issuer": "BYTE: Building Young Tech Entrepreneurs",
+            "link": "#"
+        },
+        {
+            "title": "Sumo-mBot Robotics",
+            "issuer": "DEVCON Kids Code Camp, Cebu Chapter",
+            "link": "#"
+        },
+        {
+            "title": "MYT Internship - Certificate of Completion",
+            "issuer": "MYT SoftDev Solutions Inc.",
+            "link": "#"
+        },
+        {
+            "title": "MYT Internship - Outstanding Intern Award",
+            "issuer": "MYT SoftDev Solutions Inc.",
+            "link": "#"
+        },
+        {
+            "title": "Getting Grounded on Analytics",
+            "issuer": "Development Academy of the Philippines",
+            "link": "#"
+        }
     ]
 }

@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { ExternalLink, Github } from "lucide-react";
 import { Section } from "../ui/Section";
 import { Button } from "../ui/Button";
 

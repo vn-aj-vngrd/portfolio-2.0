@@ -11,7 +11,10 @@ export const Hero = () => {
   const { about, hero } = portfolioData;
 
   return (
-    <Section className="min-h-screen flex items-center pt-32 pb-16 justify-center text-center">
+    <Section
+      id="hero"
+      className="min-h-screen flex items-center pt-32 pb-16 justify-center text-center"
+    >
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -37,7 +37,7 @@ export const Header = () => {
           href="/"
           className="text-xl font-semibold tracking-tight hover:opacity-80 transition-opacity"
         >
-          John Doe
+          Van AJ Vanguardia
         </Link>
 
         {/* Desktop Nav */}

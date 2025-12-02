@@ -8,7 +8,7 @@ import { Section } from "../ui/Section";
 import portfolioData from "@/data/portfolio-data.json";
 
 export const Hero = () => {
-  const { about } = portfolioData;
+  const { about, hero } = portfolioData;
 
   return (
     <Section className="min-h-screen flex items-center pt-32 pb-16 justify-center text-center">
@@ -31,8 +31,8 @@ export const Hero = () => {
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed"
         >
-          I'm {about.details.name}, a {about.title} based in{" "}
-          {about.details.address}. {about.description}
+          I'm {about.details.name}, a {about.role} based in{" "}
+          {about.details.address}. {hero.summary}
         </motion.p>
 
         <motion.div

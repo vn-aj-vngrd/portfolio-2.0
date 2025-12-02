@@ -1,13 +1,18 @@
 {
+    "hero": {
+        "summary": "Specializing in building scalable, high-performance web applications using the JavaScript ecosystem, .NET, and Python."
+    },
     "about": {
         "title": "About Me",
-        "description": "Hello, I am a full-stack developer specializing in the development of software solutions using JavaScript, TypeScript, PHP, and Python.",
+        "role": "Full Stack Developer",
+        "description": "I am a passionate Full-Stack Developer dedicated to building scalable, high-performance web applications. With a strong foundation in the JavaScript ecosystem and experience in .NET and Python, I enjoy solving complex problems and creating intuitive user experiences. I thrive in collaborative Agile environments and am constantly learning new technologies to stay ahead of industry trends.",
         "details": {
             "name": "Van AJ Vanguardia",
-            "age": "23 years old",
+            "age": "23",
             "degree": "BS in Information Technology",
             "email": "vanajvanguardia@gmail.com",
-            "address": "Cebu, Philippines"
+            "address": "Cebu, Philippines",
+            "availability": "Open to Opportunities"
         }
     },
     "experience": [
@@ -15,25 +20,43 @@
             "company": "Full Scale Teams PH",
             "role": "Software Developer",
             "dates": "July 2024 - Present",
-            "description": "Developing software solutions using ASP .NET Core, NextJS, Docker, MSSQL, GitHub, Slack, and Trello to collaborate with teams in writing, debugging, and testing code."
+            "description": [
+                "Architect and implement scalable features using ASP.NET Core and Next.js.",
+                "Containerize applications with Docker for consistent deployment environments.",
+                "Optimize database interactions with MSSQL to improve performance.",
+                "Collaborate in an Agile environment using Jira/Trello to deliver high-quality code."
+            ]
         },
         {
             "company": "GigaBook Inc.",
-            "role": "Full Scale - Internship",
+            "role": "Full Stack Developer Intern",
             "dates": "September 2023 - January 2024",
-            "description": "Engaged in diverse training programs and assessment projects, utilizing technologies like ASP .NET Core, NextJS, Docker, MSSQL, GitHub, Slack, and Trello to collaborate with teams in writing, debugging, and testing code."
+            "description": [
+                "Completed an intensive internship focused on full-stack web development.",
+                "Gained practical experience with ASP.NET Core, Next.js, and MSSQL.",
+                "Participated in code reviews and debugging sessions to ensure code quality.",
+                "Utilized Slack and Trello for effective team communication and project management."
+            ]
         },
         {
             "company": "MYT SoftDev Solutions Inc.",
-            "role": "Module 0 - Internship",
+            "role": "Backend Developer Intern",
             "dates": "September 2022 - December 2022",
-            "description": "Engaged in developing different ERP systems, specializing in backend development, and trained to adapt to the current trend in the IT industry."
+            "description": [
+                "Specialized in backend development for ERP systems.",
+                "Assisted in designing database schemas and implementing API endpoints.",
+                "Gained insight into industry-standard software development lifecycles."
+            ]
         },
         {
-            "company": "Summer Internship",
-            "role": "Astro Shipping Management Inc.",
+            "company": "Astro Shipping Management Inc.",
+            "role": "Software Engineering Intern",
             "dates": "June 2022 - July 2022",
-            "description": "Created software that performs data migration to transfer data from an Excel file to the company's planned maintenance system."
+            "description": [
+                "Developed a critical data migration tool to automate legacy data transfer.",
+                "Significantly reduced manual entry time and errors for the Planned Maintenance System.",
+                "Transformed raw Excel data into structured database records."
+            ]
         }
     ],
     "education": [
@@ -44,49 +67,43 @@
         }
     ],
     "skills": [
-        "JavaScript",
+        "JavaScript (ES6+)",
         "TypeScript",
-        "PHP",
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "ASP.NET Core",
         "Python",
-        "React",
-        "NextJS",
-        "NodeJS",
-        "Express",
-        "TailwindCSS",
-        "MySQL",
-        "MongoDB",
+        "Tailwind CSS",
         "PostgreSQL",
-        "ASP .NET Core",
-        "Docker",
+        "MongoDB",
         "MSSQL",
-        "GitHub",
-        "Slack",
-        "Trello",
-        "HTML5",
-        "CSS3",
-        "Git",
-        "Figma"
+        "Docker",
+        "Git & GitHub",
+        "Prisma ORM",
+        "Figma",
+        "Agile/Scrum"
     ],
     "projects": [
         {
-            "title": "Survey",
-            "description": "A survey platform",
+            "title": "Survey Platform",
+            "description": "A comprehensive survey management system allowing users to create, distribute, and analyze surveys. Features include real-time data visualization, customizable templates, and secure user authentication.",
             "tech": [
-                "NextJS",
+                "Next.js",
                 "TypeScript",
-                "TailwindCSS",
+                "Tailwind CSS",
                 "PostgreSQL",
                 "Prisma"
             ],
             "link": "https://survey-beta-pied.vercel.app/"
         },
         {
-            "title": "Convo",
-            "description": "A real-time chat application",
+            "title": "Convo Chat",
+            "description": "A real-time messaging application built for seamless communication. Supports instant messaging, group chats, and user status updates, leveraging WebSockets for low-latency performance.",
             "tech": [
-                "NextJS",
+                "Next.js",
                 "TypeScript",
-                "TailwindCSS",
+                "Tailwind CSS",
                 "MongoDB",
                 "Prisma"
             ],
@@ -94,11 +111,11 @@
         },
         {
             "title": "Unichem Store",
-            "description": "An e-commerce store",
+            "description": "A full-featured e-commerce platform designed for chemical products. Includes a dynamic product catalog, shopping cart functionality, secure checkout integration, and an admin dashboard.",
             "tech": [
-                "NextJS",
+                "Next.js",
                 "TypeScript",
-                "TailwindCSS",
+                "Tailwind CSS",
                 "MongoDB",
                 "Prisma"
             ],
@@ -106,22 +123,22 @@
         },
         {
             "title": "WatchBox",
-            "description": "A movie/TV show tracker",
+            "description": "A personal movie and TV show tracker that lets users discover new content, track their watch history, and create custom lists. Integrated with a third-party movie database API.",
             "tech": [
                 "React",
                 "JavaScript",
-                "TailwindCSS",
+                "Tailwind CSS",
                 "Firebase"
             ],
             "link": "https://watchbox-alpha.vercel.app/"
         },
         {
             "title": "NextSched",
-            "description": "A scheduling application",
+            "description": "An intuitive scheduling application for managing appointments and events. Features a drag-and-drop calendar interface, automated reminders, and conflict detection.",
             "tech": [
-                "NextJS",
+                "Next.js",
                 "TypeScript",
-                "TailwindCSS",
+                "Tailwind CSS",
                 "PostgreSQL",
                 "Prisma"
             ],

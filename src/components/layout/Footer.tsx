@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer className="bg-muted/30 border-t border-border py-12">
       <div className="container-custom flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex flex-col gap-2 text-center md:text-left">
-          <span className="text-lg font-bold">John Doe</span>
+          <span className="text-lg font-bold">Van AJ Vanguardia</span>
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Built with Next.js, Tailwind, and
             TypeScript.

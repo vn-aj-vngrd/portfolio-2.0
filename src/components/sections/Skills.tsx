@@ -16,11 +16,11 @@ const categorizeSkills = (skills: string[]) => {
   };
 
   const frontendSkills = [
-    "JavaScript",
+    "JavaScript (ES6+)",
     "TypeScript",
-    "React",
-    "NextJS",
-    "TailwindCSS",
+    "React.js",
+    "Next.js",
+    "Tailwind CSS",
     "HTML5",
     "CSS3",
     "Figma",
@@ -31,22 +31,25 @@ const categorizeSkills = (skills: string[]) => {
   const backendSkills = [
     "PHP",
     "Python",
-    "NodeJS",
+    "Node.js",
     "Express",
-    "ASP .NET Core",
+    "ASP.NET Core",
     "REST APIs",
+    "Prisma ORM",
   ];
   const databaseSkills = ["MySQL", "MongoDB", "PostgreSQL", "MSSQL", "Redis"];
   const toolSkills = [
     "Docker",
-    "GitHub",
+    "Git & GitHub",
     "Git",
+    "GitHub",
     "Slack",
     "Trello",
     "AWS",
     "CI/CD",
     "Jest",
     "Cypress",
+    "Agile/Scrum",
   ];
 
   skills.forEach((skill) => {

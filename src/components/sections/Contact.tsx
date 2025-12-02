@@ -29,7 +29,7 @@ export const Contact = () => {
                 type="text"
                 id="name"
                 className="w-full px-4 py-3 rounded-xl border-0 bg-muted/50 focus:bg-background focus:ring-2 focus:ring-accent/20 transition-all outline-none"
-                placeholder="John Doe"
+                placeholder="Van AJ Vanguardia"
               />
             </div>
             <div className="space-y-2">
@@ -40,7 +40,7 @@ export const Contact = () => {
                 type="email"
                 id="email"
                 className="w-full px-4 py-3 rounded-xl border-0 bg-muted/50 focus:bg-background focus:ring-2 focus:ring-accent/20 transition-all outline-none"
-                placeholder="john@example.com"
+                placeholder="vanajvanguardia@gmail.com"
               />
             </div>
           </div>
@@ -66,10 +66,10 @@ export const Contact = () => {
           <p className="text-muted-foreground">
             Or email me directly at{" "}
             <a
-              href="mailto:hello@example.com"
+              href="mailto:vanajvanguardia@gmail.com"
               className="text-accent hover:underline font-medium"
             >
-              hello@example.com
+              vanajvanguardia@gmail.com
             </a>
           </p>
         </div>

@@ -9,7 +9,7 @@ const experience = portfolioData.experience.map((job) => ({
   role: job.role,
   company: job.company,
   period: job.dates,
-  description: [job.description], // Wrap string in array to match component structure
+  description: job.description,
 }));
 
 import { motion } from "framer-motion";

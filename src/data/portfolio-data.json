@@ -68,13 +68,12 @@
     ],
     "skills": {
         "Frontend": [
-            "JavaScript (ES6+)",
+            "JavaScript",
             "TypeScript",
             "React.js",
+            "React Native",
             "Next.js",
             "Tailwind CSS",
-            "HTML5",
-            "CSS3",
             "Figma",
             "Redux",
             "Zustand"
@@ -83,10 +82,8 @@
             "Node.js",
             "Express",
             "ASP.NET Core",
-            "PHP",
-            "Python",
-            "REST APIs",
-            "GraphQL"
+            "Laravel",
+            "REST APIs"
         ],
         "Database": [
             "PostgreSQL",
@@ -99,60 +96,29 @@
         "Tools & DevOps": [
             "Docker",
             "Git & GitHub",
+            "Postman",
             "AWS",
             "CI/CD",
             "Jest",
-            "Cypress",
+            "Playwright",
             "Agile/Scrum"
         ]
     },
     "projects": [
         {
-            "title": "Survey Platform",
-            "description": "A comprehensive survey management system allowing users to create, distribute, and analyze surveys. Features include real-time data visualization, customizable templates, and secure user authentication.",
-            "tech": [
-                "Next.js",
-                "TypeScript",
-                "Tailwind CSS",
-                "PostgreSQL",
-                "Prisma"
-            ],
-            "link": "https://survey-beta-pied.vercel.app/"
-        },
-        {
-            "title": "Convo Chat",
-            "description": "A real-time messaging application built for seamless communication. Supports instant messaging, group chats, and user status updates, leveraging WebSockets for low-latency performance.",
-            "tech": [
-                "Next.js",
-                "TypeScript",
-                "Tailwind CSS",
-                "MongoDB",
-                "Prisma"
-            ],
-            "link": "https://convo-beta-five.vercel.app/"
-        },
-        {
-            "title": "Unichem Store",
-            "description": "A full-featured e-commerce platform designed for chemical products. Includes a dynamic product catalog, shopping cart functionality, secure checkout integration, and an admin dashboard.",
-            "tech": [
-                "Next.js",
-                "TypeScript",
-                "Tailwind CSS",
-                "MongoDB",
-                "Prisma"
-            ],
-            "link": "https://unichem-store.vercel.app/"
-        },
-        {
             "title": "WatchBox",
             "description": "A personal movie and TV show tracker that lets users discover new content, track their watch history, and create custom lists. Integrated with a third-party movie database API.",
             "tech": [
-                "React",
-                "JavaScript",
+                "Next.js",
+                "TypeScript",
                 "Tailwind CSS",
-                "Firebase"
+                "Vercel",
+                "CockroachDB",
+                "Prisma",
+                "NextAuth.js"
             ],
-            "link": "https://watchbox-alpha.vercel.app/"
+            "link": "https://watchbox.vercel.app/auth/signin",
+            "code": "https://github.com/vn-aj-vngrd/watchbox"
         },
         {
             "title": "NextSched",
@@ -164,7 +130,21 @@
                 "PostgreSQL",
                 "Prisma"
             ],
-            "link": "https://nextsched-beta.vercel.app/"
+            "link": "https://nextsched-beta.vercel.app/",
+            "code": "https://github.com/vn-aj-vngrd/next-sched"
+        },
+        {
+            "title": "Astro Foundation Landing Page",
+            "description": "A landing page for the Astro Foundation, a non-profit organization that provides scholarships and resources to underprivileged students.",
+            "tech": [
+                "Next.js",
+                "TypeScript",
+                "Tailwind CSS",
+                "Vercel",
+                "Sanity"
+            ],
+            "link": "https://astrofoundation.vercel.app/",
+            "code": "https://github.com/vn-aj-vngrd/astrofoundation"
         }
     ],
     "certifications": [

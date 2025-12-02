@@ -166,7 +166,7 @@ export const Header = () => {
                         layout
                         className={`h-1.5 rounded-full transition-all duration-300 ${
                           activeSection === id
-                            ? "w-4 bg-foreground shadow-[0_0_8px_hsl(var(--foreground)/0.4)]"
+                            ? "w-4 bg-accent shadow-[0_0_8px_hsl(var(--accent)/0.4)]"
                             : "w-1.5 bg-muted-foreground/30 group-hover:bg-muted-foreground/50"
                         }`}
                       />

@@ -124,7 +124,7 @@ export const Projects = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.4 }}
-        className="mt-16 relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent/5 via-background to-accent/5 border border-accent/10 p-8 md:p-12 text-center"
+        className="mt-16 relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent/5 via-background to-accent/5 dark:from-accent/10 dark:via-background/50 dark:to-accent/10 border border-accent/10 p-8 md:p-12 text-center"
       >
         <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
         <div className="relative z-10 flex flex-col items-center gap-4">

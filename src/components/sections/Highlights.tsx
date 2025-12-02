@@ -3,7 +3,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Section } from "../ui/Section";
-import { Code2, Globe, Zap, Layout, Users, GitCommit } from "lucide-react";
+import {
+  Code2,
+  Globe,
+  Zap,
+  Layout,
+  Users,
+  GitCommit,
+  Linkedin,
+} from "lucide-react";
 import { Counter } from "../ui/Counter";
 import Image from "next/image";
 import portfolioData from "@/data/portfolio-data.json";
@@ -165,9 +173,14 @@ export const Highlights = () => {
             <Code2 className="text-purple-500" size={28} />
             <div>
               <h4 className="font-semibold text-lg">Education</h4>
-              <p className="text-sm text-muted-foreground">
-                {about.details.degree}
-              </p>
+              <div className="space-y-1">
+                <p className="text-sm font-medium text-foreground">
+                  University of San Carlos
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  {about.details.degree}
+                </p>
+              </div>
             </div>
           </div>
         </BentoCard>
@@ -188,13 +201,25 @@ export const Highlights = () => {
                 </p>
               </div>
             </div>
-            <div className="hidden md:flex gap-2 items-center">
-              <div className="p-4 bg-white rounded-2xl shadow-sm border border-black/5">
-                <GitCommit className="text-muted-foreground" />
-              </div>
-              <div className="p-4 bg-white rounded-2xl shadow-sm border border-black/5">
-                <Users className="text-muted-foreground" />
-              </div>
+            <div className="hidden md:flex gap-3 items-center">
+              <a
+                href="https://github.com/vanajvanguardia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 bg-white dark:bg-white/5 rounded-2xl shadow-sm border border-black/5 dark:border-white/5 hover:scale-110 hover:rotate-3 transition-all duration-300 group"
+                aria-label="GitHub Profile"
+              >
+                <GitCommit className="text-muted-foreground group-hover:text-foreground transition-colors" />
+              </a>
+              <a
+                href="https://linkedin.com/in/vanajvanguardia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 bg-white dark:bg-white/5 rounded-2xl shadow-sm border border-black/5 dark:border-white/5 hover:scale-110 hover:-rotate-3 transition-all duration-300 group"
+                aria-label="LinkedIn Profile"
+              >
+                <Linkedin className="text-muted-foreground group-hover:text-blue-600 transition-colors" />
+              </a>
             </div>
           </div>
         </BentoCard>

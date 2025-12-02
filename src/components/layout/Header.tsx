@@ -185,13 +185,7 @@ export const Header = () => {
                 >
                   <ArrowUp size={16} />
                 </button>
-                <Link
-                  href="/"
-                  className="p-2 hover:bg-muted rounded-full transition-colors text-muted-foreground hover:text-foreground"
-                  aria-label="Home"
-                >
-                  <Home size={16} />
-                </Link>
+
                 <Link
                   href="#contact"
                   className="p-2 hover:bg-muted rounded-full transition-colors text-muted-foreground hover:text-foreground"

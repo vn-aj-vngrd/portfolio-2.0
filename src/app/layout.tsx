@@ -16,13 +16,45 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Van AJ Vanguardia | Software Developer",
+  title: "Van AJ Vanguardia | Full Stack Developer",
   description:
-    "Software Developer specializing in scalable web applications, design systems, and performance optimization.",
+    "Full Stack Developer based in Cebu, Philippines, specializing in building scalable, high-performance web applications using the JavaScript ecosystem, .NET, and PHP. Passionate about creating intuitive user experiences and solving complex problems.",
+  keywords: [
+    "Van AJ Vanguardia",
+    "Full Stack Developer",
+    "Software Engineer",
+    "Web Developer",
+    "React",
+    "Next.js",
+    "ASP.NET Core",
+    "TypeScript",
+    "Cebu",
+    "Philippines",
+  ],
+  authors: [{ name: "Van AJ Vanguardia" }],
   openGraph: {
-    title: "Van AJ Vanguardia | Software Developer",
-    description: "Building high-performance web applications.",
+    title: "Van AJ Vanguardia | Full Stack Developer",
+    description:
+      "Full Stack Developer specializing in scalable web applications, design systems, and performance optimization.",
+    url: "https://vanajvanguardia.com", // Replace with actual URL if available
+    siteName: "Van AJ Vanguardia Portfolio",
+    images: [
+      {
+        url: "/images/profile.jpg", // Using the profile image as OG image
+        width: 800,
+        height: 800,
+        alt: "Van AJ Vanguardia",
+      },
+    ],
+    locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Van AJ Vanguardia | Full Stack Developer",
+    description:
+      "Building digital products with precision and purpose. Specializing in React, Next.js, and .NET.",
+    images: ["/images/profile.jpg"],
   },
 };
 

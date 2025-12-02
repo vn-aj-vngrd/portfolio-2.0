@@ -3,10 +3,32 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Section } from "../ui/Section";
-
 import portfolioData from "@/data/portfolio-data.json";
+import { Layout, Server, Database, Terminal } from "lucide-react";
 
 const skills = portfolioData.skills;
+
+const iconMap: Record<string, React.ReactNode> = {
+  Frontend: <Layout className="w-6 h-6" />,
+  Backend: <Server className="w-6 h-6" />,
+  Database: <Database className="w-6 h-6" />,
+  "Tools & DevOps": <Terminal className="w-6 h-6" />,
+};
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 10 },
+  show: { opacity: 1, y: 0 },
+};
 
 export const Skills = () => {
   return (
@@ -20,31 +42,49 @@ export const Skills = () => {
       >
         Technical Skills
       </motion.h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        {Object.entries(skills).map(([category, items], index) => (
-          <motion.div
-            key={category}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="glass-card rounded-3xl p-8"
-          >
-            <h3 className="text-xl font-semibold mb-6 text-foreground">
-              {category}
-            </h3>
-            <div className="flex flex-wrap gap-3">
-              {items.map((skill) => (
-                <span
-                  key={skill}
-                  className="px-4 py-2 bg-background/50 border border-black/5 rounded-full text-sm font-medium text-foreground hover:bg-background transition-colors cursor-default"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-        ))}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {Object.entries(skills).map(
+          ([category, items]: [string, string[]], index) => (
+            <motion.div
+              key={category}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group relative glass-card rounded-3xl p-8 overflow-hidden hover:shadow-2xl hover:shadow-accent/5 transition-all duration-500 border border-border/50"
+            >
+              {/* Gradient Header / Accent */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              <div className="flex items-center gap-4 mb-8">
+                <div className="p-2.5 rounded-xl bg-accent/5 text-muted-foreground group-hover:text-accent group-hover:bg-accent/10 transition-colors duration-300">
+                  {iconMap[category] || <Terminal className="w-5 h-5" />}
+                </div>
+                <h3 className="text-lg font-semibold text-foreground tracking-tight">
+                  {category}
+                </h3>
+              </div>
+
+              <motion.div
+                variants={container}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                className="flex flex-wrap gap-2.5"
+              >
+                {items.map((skill) => (
+                  <motion.span
+                    key={skill}
+                    variants={item}
+                    className="px-3.5 py-1.5 bg-background/40 border border-border/40 rounded-full text-sm font-medium text-muted-foreground hover:text-foreground hover:border-accent/40 hover:bg-accent/5 hover:scale-105 transition-all duration-300 cursor-default backdrop-blur-sm"
+                  >
+                    {skill}
+                  </motion.span>
+                ))}
+              </motion.div>
+            </motion.div>
+          )
+        )}
       </div>
     </Section>
   );

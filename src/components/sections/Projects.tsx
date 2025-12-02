@@ -126,6 +126,24 @@ export const Projects = () => {
         transition={{ duration: 0.5, delay: 0.4 }}
         className="mt-16 relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent/5 via-background to-accent/5 dark:from-accent/10 dark:via-background/50 dark:to-accent/10 border border-accent/10 p-8 md:p-12 text-center"
       >
+        {/* Loading Border Effect */}
+        <div
+          className="absolute inset-0 rounded-3xl pointer-events-none"
+          style={{
+            maskImage:
+              "linear-gradient(white, white), linear-gradient(white, white)",
+            maskClip: "content-box, border-box",
+            maskComposite: "exclude",
+            WebkitMaskImage:
+              "linear-gradient(white, white), linear-gradient(white, white)",
+            WebkitMaskClip: "content-box, border-box",
+            WebkitMaskComposite: "xor",
+            padding: "2px",
+          }}
+        >
+          <div className="absolute -inset-[100%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_0deg_at_50%_50%,transparent_0%,transparent_70%,var(--accent)_100%)]" />
+        </div>
+
         <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
         <div className="relative z-10 flex flex-col items-center gap-4">
           <div className="p-3 rounded-full bg-accent/10 text-accent mb-2">

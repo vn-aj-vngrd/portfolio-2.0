@@ -122,7 +122,7 @@ export const Highlights = () => {
                   <Counter value={Object.values(skills).flat().length} />+
                 </span>
                 <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">
-                  Technologies Mastered
+                  Skills & Tools
                 </p>
               </div>
             </div>

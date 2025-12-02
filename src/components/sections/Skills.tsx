@@ -4,7 +4,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Section } from "../ui/Section";
 import portfolioData from "@/data/portfolio-data.json";
-import { Layout, Server, Database, Terminal } from "lucide-react";
+import {
+  Layout,
+  Server,
+  Database,
+  Terminal,
+  Sparkles,
+  Users,
+} from "lucide-react";
 
 const skills = portfolioData.skills;
 
@@ -13,6 +20,8 @@ const iconMap: Record<string, React.ReactNode> = {
   Backend: <Server className="w-6 h-6" />,
   Database: <Database className="w-6 h-6" />,
   "Tools & DevOps": <Terminal className="w-6 h-6" />,
+  "AI Tools": <Sparkles className="w-6 h-6" />,
+  "Soft Skills": <Users className="w-6 h-6" />,
 };
 
 const container = {

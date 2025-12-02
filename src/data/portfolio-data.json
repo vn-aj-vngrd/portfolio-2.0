@@ -102,6 +102,24 @@
             "Jest",
             "Playwright",
             "Agile/Scrum"
+        ],
+        "AI Tools": [
+            "Cursor",
+            "Claude Code",
+            "Opencode",
+            "Codex",
+            "GLM",
+            "Gemini CLI",
+            "Kilocode"
+        ],
+        "Soft Skills": [
+            "Communication",
+            "Teamwork",
+            "Problem Solving",
+            "Adaptability",
+            "Time Management",
+            "Leadership",
+            "Critical Thinking"
         ]
     },
     "projects": [

@@ -1,0 +1,120 @@
+"use client";
+
+import React from "react";
+import { ExternalLink, Github } from "lucide-react";
+import { Section } from "../ui/Section";
+import { Button } from "../ui/Button";
+
+const projects = [
+  {
+    title: "E-commerce Dashboard Refactor",
+    description:
+      "Rebuilt the vendor dashboard for a major e-commerce platform, focusing on performance and accessibility. Migrated from a legacy SPA to Next.js.",
+    metrics: "Reduced TTI by 40% • 50k+ daily users • 98/100 Lighthouse",
+    tags: ["Next.js", "TypeScript", "GraphQL", "TanStack Query"],
+    links: {
+      demo: "https://example.com",
+      repo: "https://github.com",
+    },
+  },
+  {
+    title: "Cloud Infrastructure Monitor",
+    description:
+      "Real-time monitoring tool for distributed cloud systems. Implemented WebSocket connections for live data updates and D3.js for complex visualizations.",
+    metrics:
+      "Handles 10k+ events/sec • <50ms latency • Zero downtime deployment",
+    tags: ["React", "Node.js", "WebSockets", "D3.js", "Redis"],
+    links: {
+      demo: "https://example.com",
+      repo: "https://github.com",
+    },
+  },
+  {
+    title: "Design System Documentation",
+    description:
+      "Created a comprehensive documentation site for an internal design system. Features interactive component playgrounds and automated props table generation.",
+    metrics: "Used by 40+ engineers • Reduced onboarding time by 50%",
+    tags: ["Next.js", "MDX", "Tailwind CSS", "Storybook"],
+    links: {
+      demo: "https://example.com",
+      repo: "https://github.com",
+    },
+  },
+];
+
+import { motion } from "framer-motion";
+
+export const Projects = () => {
+  return (
+    <Section id="projects">
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="text-4xl font-semibold mb-16 tracking-tight"
+      >
+        Featured Projects
+      </motion.h2>
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className="glass-card rounded-3xl p-8 flex flex-col h-full hover:scale-[1.02] transition-transform duration-300"
+          >
+            <div className="mb-6">
+              <h3 className="text-2xl font-semibold mb-3 group-hover:text-accent transition-colors">
+                {project.title}
+              </h3>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                {project.description}
+              </p>
+            </div>
+
+            <div className="mt-auto">
+              <p className="text-sm font-medium text-foreground mb-6 bg-muted/50 inline-block px-3 py-1 rounded-lg">
+                {project.metrics}
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-8">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-3 py-1 bg-muted text-xs font-medium rounded-full text-muted-foreground"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex gap-3">
+                <Button variant="outline" size="sm" asChild className="flex-1">
+                  <a
+                    href={project.links.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Live Demo
+                  </a>
+                </Button>
+                <Button variant="ghost" size="sm" asChild className="flex-1">
+                  <a
+                    href={project.links.repo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Code
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </Section>
+  );
+};

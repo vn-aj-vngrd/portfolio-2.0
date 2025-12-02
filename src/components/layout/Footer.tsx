@@ -9,8 +9,8 @@ export const Footer = () => {
         <div className="flex flex-col gap-2 text-center md:text-left">
           <span className="text-lg font-bold">Van AJ Vanguardia</span>
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Built with Next.js, Tailwind, and
-            TypeScript.
+            © {new Date().getFullYear()}. Crafted with precision using Next.js &
+            Tailwind CSS.
           </p>
         </div>
 

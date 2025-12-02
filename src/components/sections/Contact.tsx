@@ -4,9 +4,12 @@ import React from "react";
 import { Section } from "../ui/Section";
 import { Button } from "../ui/Button";
 
+import { ContactBackground } from "../ui/ContactBackground";
+
 export const Contact = () => {
   return (
-    <Section id="contact">
+    <Section id="contact" className="relative overflow-hidden">
+      <ContactBackground />
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-4xl font-semibold mb-6 tracking-tight">
           Get In Touch
@@ -63,16 +66,18 @@ export const Contact = () => {
           </Button>
         </form>
 
-        <div className="mt-16 pt-8 border-t border-border/50">
-          <p className="text-muted-foreground">
-            Or email me directly at{" "}
+        <div className="mt-12">
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass-card hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <span className="text-muted-foreground font-medium">
+              Or email me directly at
+            </span>
             <a
               href="mailto:vanajvanguardia@gmail.com"
-              className="text-accent hover:underline font-medium"
+              className="text-accent font-semibold hover:underline"
             >
               vanajvanguardia@gmail.com
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </Section>

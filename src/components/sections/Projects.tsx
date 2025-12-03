@@ -21,11 +21,11 @@ import { Heading, Text } from "../ui/Typography";
 const projects = portfolioData.projects.map((project) => ({
   title: project.title,
   description: project.description,
-  metrics: "View Project Details", // Placeholder as metrics are not in JSON
+  features: project.features,
   tags: project.tech,
   links: {
     demo: project.link,
-    repo: project.link, // Assuming repo link is same or not available separately
+    repo: project.code,
   },
 }));
 
@@ -73,6 +73,18 @@ export const Projects = () => {
                 <Text className="text-base text-muted-foreground leading-relaxed mb-6 line-clamp-3">
                   {project.description}
                 </Text>
+
+                {/* Features List */}
+                <Box className="mb-6">
+                  <Text className="text-sm font-semibold text-foreground mb-2">
+                    Key Features:
+                  </Text>
+                  <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                    {project.features?.slice(0, 3).map((feature, i) => (
+                      <li key={i}>{feature}</li>
+                    ))}
+                  </ul>
+                </Box>
               </CardHeader>
 
               <CardContent className="p-8 pt-0 mt-auto space-y-6">

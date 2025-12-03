@@ -135,7 +135,7 @@ export const Contact = () => {
                 transition: { duration: 0.6, ease: "easeOut" },
               },
             }}
-            className="group flex flex-col sm:flex-row items-center gap-4 sm:gap-6 px-6 py-5 sm:px-8 sm:py-4 rounded-[2rem] glass-card border border-border/50 hover:border-accent/20 transition-colors duration-300 max-w-full"
+            className="group flex flex-col sm:flex-row items-center gap-4 sm:gap-6 px-6 py-5 sm:px-8 sm:py-4 rounded-4xl glass-card border border-border/50 hover:border-accent/20 transition-colors duration-300 max-w-full"
           >
             <div className="p-3 rounded-full bg-accent/10 text-accent shrink-0">
               <Mail size={20} />

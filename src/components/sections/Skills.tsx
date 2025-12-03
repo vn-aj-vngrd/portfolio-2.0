@@ -64,7 +64,7 @@ export const Skills = () => {
               className="group relative glass-card rounded-3xl p-8 overflow-hidden hover:shadow-2xl hover:shadow-accent/5 transition-shadow duration-500 border border-border/50"
             >
               {/* Gradient Header / Accent */}
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-transparent via-accent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="flex items-center gap-4 mb-8">
                 <div className="p-2.5 rounded-xl bg-accent/5 text-muted-foreground group-hover:text-accent group-hover:bg-accent/10 transition-colors duration-300">

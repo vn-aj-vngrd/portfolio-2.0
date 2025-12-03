@@ -32,7 +32,7 @@ export const Certifications = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="glass-card rounded-3xl p-8 flex flex-col h-full hover:scale-[1.02] transition-transform duration-300"
           >
-            <div className="mb-6 flex-grow">
+            <div className="mb-6 grow">
               <h3 className="text-xl font-semibold mb-2 group-hover:text-accent transition-colors">
                 {cert.title}
               </h3>

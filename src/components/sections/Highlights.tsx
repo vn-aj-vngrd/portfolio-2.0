@@ -48,7 +48,7 @@ export const Highlights = () => {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(200px,auto)]">
         {/* Large Card: Tech Focus & Profile */}
-        <BentoCard className="md:col-span-2 md:row-span-2 !p-0 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 overflow-hidden">
+        <BentoCard className="md:col-span-2 md:row-span-2 p-0! bg-linear-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 overflow-hidden">
           <div className="flex flex-col md:flex-row h-full">
             <div className="p-8 md:p-10 flex flex-col justify-between md:w-3/5 order-2 md:order-1">
               <div className="space-y-4">
@@ -63,7 +63,7 @@ export const Highlights = () => {
               </div>
             </div>
             <div className="relative min-h-[300px] md:min-h-0 md:h-full md:w-2/5 order-1 md:order-2">
-              <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-black/20 via-transparent to-transparent z-10" />
+              <div className="absolute inset-0 bg-linear-to-t md:bg-linear-to-l from-black/20 via-transparent to-transparent z-10" />
               <Image
                 src="/images/profile.jpg"
                 alt="Profile"
@@ -77,7 +77,7 @@ export const Highlights = () => {
         {/* Stats Card */}
         <BentoCard
           delay={0.1}
-          className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20"
+          className="bg-linear-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20"
         >
           <div className="flex flex-col justify-between h-full gap-6">
             <div className="flex items-center gap-2">
@@ -124,7 +124,7 @@ export const Highlights = () => {
         {/* Skills Summary Card */}
         <BentoCard
           delay={0.2}
-          className="bg-gradient-to-br from-orange-50 to-amber-50 dark:from-orange-900/20 dark:to-amber-900/20"
+          className="bg-linear-to-br from-orange-50 to-amber-50 dark:from-orange-900/20 dark:to-amber-900/20"
         >
           <div className="flex flex-col h-full gap-4">
             <div className="flex items-center gap-2">
@@ -146,7 +146,7 @@ export const Highlights = () => {
         {/* Medium Card: Education */}
         <BentoCard
           delay={0.3}
-          className="md:col-span-1 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20"
+          className="md:col-span-1 bg-linear-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20"
         >
           <div className="flex flex-col h-full gap-4">
             <div className="flex items-center gap-2">
@@ -167,7 +167,7 @@ export const Highlights = () => {
         {/* Hobbies Card */}
         <BentoCard
           delay={0.35}
-          className="md:col-span-1 bg-gradient-to-br from-rose-50 to-red-50 dark:from-rose-900/20 dark:to-red-900/20"
+          className="md:col-span-1 bg-linear-to-br from-rose-50 to-red-50 dark:from-rose-900/20 dark:to-red-900/20"
         >
           <div className="flex flex-col h-full gap-4">
             <div className="flex items-center gap-2">
@@ -190,7 +190,7 @@ export const Highlights = () => {
         {/* Medium Card: Location & Contact */}
         <BentoCard
           delay={0.4}
-          className="md:col-span-1 bg-gradient-to-br from-gray-50 to-slate-100 dark:from-gray-900/20 dark:to-slate-900/20"
+          className="md:col-span-1 bg-linear-to-br from-gray-50 to-slate-100 dark:from-gray-900/20 dark:to-slate-900/20"
         >
           <div className="flex flex-col h-full gap-4">
             <div className="flex justify-between items-start">

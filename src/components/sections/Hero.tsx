@@ -1,13 +1,15 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 import portfolioData from "@/data/portfolio-data.json";
 
 import { Button } from "../ui/Button";
 import { HeroBackground } from "../ui/HeroBackground";
+import { Box } from "../ui/Layout";
+import { FadeIn } from "../ui/Motion";
 import { Section } from "../ui/Section";
+import { Heading, Text } from "../ui/Typography";
 
 export const Hero = () => {
   const { about, hero } = portfolioData;
@@ -18,33 +20,30 @@ export const Hero = () => {
       className="min-h-screen flex items-start md:items-center pt-48! md:pt-32 pb-16 justify-center text-center relative overflow-hidden"
     >
       <HeroBackground />
-      <div className="max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          <h1 className="text-5xl md:text-8xl font-semibold tracking-tighter mb-8 leading-[1.05] bg-clip-text text-transparent bg-linear-to-b from-foreground to-foreground/70">
+      <Box className="max-w-4xl mx-auto">
+        <FadeIn>
+          <Heading
+            variant="h1"
+            className="text-5xl md:text-8xl lg:text-8xl font-semibold tracking-tighter mb-8 leading-[1.05] bg-clip-text text-transparent bg-linear-to-b from-foreground to-foreground/70"
+          >
             Building digital products with{" "}
             <span className="text-accent">precision</span> and{" "}
             <span className="text-accent">purpose</span>.
-          </h1>
-        </motion.div>
+          </Heading>
+        </FadeIn>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed"
-        >
-          I&apos;m {about.details.name}, a {about.role} based in{" "}
-          {about.details.address}. {hero.summary}
-        </motion.p>
+        <FadeIn delay={0.2}>
+          <Text
+            variant="lead"
+            className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed"
+          >
+            I&apos;m {about.details.name}, a {about.role} based in{" "}
+            {about.details.address}. {hero.summary}
+          </Text>
+        </FadeIn>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+        <FadeIn
+          delay={0.4}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Button size="lg" className="h-14 px-8 text-lg" asChild>
@@ -62,8 +61,8 @@ export const Hero = () => {
               Experience <ArrowRight className="h-5 w-5" />
             </a>
           </Button>
-        </motion.div>
-      </div>
+        </FadeIn>
+      </Box>
     </Section>
   );
 };

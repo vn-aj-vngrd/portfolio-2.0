@@ -1,62 +1,64 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 
 import portfolioData from "@/data/portfolio-data.json";
 
 import { Button } from "../ui/Button";
+import { Card, CardFooter, CardHeader, CardTitle } from "../ui/Card";
+import { Grid } from "../ui/Layout";
+import { FadeIn } from "../ui/Motion";
 import { Section } from "../ui/Section";
+import { Heading, Text } from "../ui/Typography";
 
 const certifications = portfolioData.certifications;
 
 export const Certifications = () => {
   return (
     <Section id="certifications">
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="text-4xl font-semibold mb-16 tracking-tight"
-      >
-        Certifications
-      </motion.h2>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <FadeIn>
+        <Heading
+          variant="h2"
+          className="text-4xl font-semibold mb-16 tracking-tight"
+        >
+          Certifications
+        </Heading>
+      </FadeIn>
+      <Grid className="gap-6 md:grid-cols-2 lg:grid-cols-3">
         {certifications.map((cert, index) => (
-          <motion.div
+          <FadeIn
             key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            delay={index * 0.1}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="glass-card rounded-3xl p-8 flex flex-col h-full hover:scale-[1.02] transition-transform duration-300"
+            className="h-full"
           >
-            <div className="mb-6 grow">
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-accent transition-colors">
-                {cert.title}
-              </h3>
-              <p className="text-base text-muted-foreground font-medium">
-                {cert.issuer}
-              </p>
-            </div>
+            <Card className="p-8 flex flex-col h-full hover:scale-[1.02] transition-transform duration-300">
+              <CardHeader className="p-0 mb-6 grow">
+                <CardTitle className="text-xl font-semibold mb-2 group-hover:text-accent transition-colors">
+                  {cert.title}
+                </CardTitle>
+                <Text className="text-base text-muted-foreground font-medium">
+                  {cert.issuer}
+                </Text>
+              </CardHeader>
 
-            <div className="mt-auto">
-              <Button variant="outline" size="sm" asChild className="w-full">
-                <a
-                  href={cert.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2"
-                >
-                  See Certificate
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </Button>
-            </div>
-          </motion.div>
+              <CardFooter className="p-0 mt-auto">
+                <Button variant="outline" size="sm" asChild className="w-full">
+                  <a
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2"
+                  >
+                    See Certificate
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </Button>
+              </CardFooter>
+            </Card>
+          </FadeIn>
         ))}
-      </div>
+      </Grid>
     </Section>
   );
 };

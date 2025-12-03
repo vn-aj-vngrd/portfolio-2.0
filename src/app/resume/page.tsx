@@ -14,9 +14,8 @@ import Link from "next/link";
 import { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
 
-import portfolioData from "@/data/portfolio-data.json";
-
 import { Button } from "@/components/ui/Button";
+import portfolioData from "@/data/portfolio-data.json";
 
 export default function ResumePage() {
   const componentRef = useRef<HTMLDivElement>(null);

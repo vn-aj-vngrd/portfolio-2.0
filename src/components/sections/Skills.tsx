@@ -12,7 +12,11 @@ import {
 
 import portfolioData from "@/data/portfolio-data.json";
 
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/Card";
+import { Box, Flex, Grid } from "../ui/Layout";
+import { FadeIn } from "../ui/Motion";
 import { Section } from "../ui/Section";
+import { Heading } from "../ui/Typography";
 
 const skills = portfolioData.skills;
 
@@ -72,16 +76,15 @@ const item = {
 export const Skills = () => {
   return (
     <Section id="skills">
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="text-4xl font-semibold mb-16 tracking-tight"
-      >
-        Skills
-      </motion.h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <FadeIn>
+        <Heading
+          variant="h2"
+          className="text-4xl font-semibold mb-16 tracking-tight"
+        >
+          Skills
+        </Heading>
+      </FadeIn>
+      <Grid className="grid-cols-1 md:grid-cols-2 gap-8">
         {Object.entries(skills).map(
           ([category, items]: [string, string[]], index) => {
             const gradientClass =
@@ -89,51 +92,59 @@ export const Skills = () => {
             const accentClass = accentColorMap[category] || "text-gray-600";
 
             return (
-              <motion.div
+              <FadeIn
                 key={category}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                delay={index * 0.1}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`group relative glass-card rounded-3xl p-8 overflow-hidden hover:shadow-2xl transition-shadow duration-500 border border-border/50 bg-linear-to-br ${gradientClass}`}
+                className="h-full"
               >
-                <div className="flex items-center gap-4 mb-8">
-                  <div
-                    className={`p-2.5 rounded-xl ${accentClass
-                      .split(" ")
-                      .filter((c) => c.includes("bg-") || c.includes("text-"))
-                      .join(" ")}`}
-                  >
-                    {iconMap[category] || <Terminal className="w-6 h-6" />}
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground tracking-tight">
-                    {category}
-                  </h3>
-                </div>
-
-                <motion.div
-                  variants={container}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true }}
-                  className="flex flex-wrap gap-2.5"
+                <Card
+                  className={`group relative h-full p-8 overflow-hidden hover:shadow-2xl transition-shadow duration-500 border border-border/50 bg-linear-to-br ${gradientClass}`}
                 >
-                  {items.map((skill) => (
-                    <motion.span
-                      key={skill}
-                      variants={item}
-                      whileHover={{ scale: 1.05 }}
-                      className={`px-3.5 py-1.5 bg-white/60 dark:bg-black/20 border border-black/5 dark:border-white/5 rounded-full text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 cursor-default backdrop-blur-sm`}
+                  <CardHeader className="p-0 mb-8">
+                    <Flex align="center" gap="gap-4">
+                      <Box
+                        className={`p-2.5 rounded-xl ${accentClass
+                          .split(" ")
+                          .filter(
+                            (c) => c.includes("bg-") || c.includes("text-")
+                          )
+                          .join(" ")}`}
+                      >
+                        {iconMap[category] || <Terminal className="w-6 h-6" />}
+                      </Box>
+                      <CardTitle className="text-xl font-semibold text-foreground tracking-tight">
+                        {category}
+                      </CardTitle>
+                    </Flex>
+                  </CardHeader>
+
+                  <CardContent className="p-0">
+                    <motion.div
+                      variants={container}
+                      initial="hidden"
+                      whileInView="show"
+                      viewport={{ once: true }}
+                      className="flex flex-wrap gap-2.5"
                     >
-                      {skill}
-                    </motion.span>
-                  ))}
-                </motion.div>
-              </motion.div>
+                      {items.map((skill) => (
+                        <motion.span
+                          key={skill}
+                          variants={item}
+                          whileHover={{ scale: 1.05 }}
+                          className={`px-3.5 py-1.5 bg-white/60 dark:bg-black/20 border border-black/5 dark:border-white/5 rounded-full text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 cursor-default backdrop-blur-sm`}
+                        >
+                          {skill}
+                        </motion.span>
+                      ))}
+                    </motion.div>
+                  </CardContent>
+                </Card>
+              </FadeIn>
             );
           }
         )}
-      </div>
+      </Grid>
     </Section>
   );
 };

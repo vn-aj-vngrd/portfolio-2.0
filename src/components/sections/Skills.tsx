@@ -50,7 +50,7 @@ export const Skills = () => {
         transition={{ duration: 0.5 }}
         className="text-4xl font-semibold mb-16 tracking-tight"
       >
-        Technical Skills
+        Skills
       </motion.h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {Object.entries(skills).map(

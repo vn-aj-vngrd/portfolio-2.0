@@ -5,6 +5,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { KeyboardManager } from "@/components/ui/KeyboardManager";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
 const geistSans = Geist({
@@ -82,6 +83,7 @@ export default function RootLayout({
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300/30 dark:bg-indigo-500/10 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-30 dark:opacity-20 animate-blob animation-delay-4000"></div>
           </div>
           <Header />
+          <KeyboardManager />
           {children}
           <Footer />
         </ThemeProvider>

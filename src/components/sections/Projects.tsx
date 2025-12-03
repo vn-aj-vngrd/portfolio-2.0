@@ -39,9 +39,10 @@ export const Projects = () => {
             key={index}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="group relative glass-card rounded-3xl overflow-hidden flex flex-col h-full hover:shadow-2xl hover:shadow-accent/5 transition-all duration-500 border border-border/50"
+            style={{ willChange: "opacity, transform" }}
+            className="group relative glass-card rounded-3xl overflow-hidden flex flex-col h-full hover:shadow-2xl hover:shadow-accent/5 transition-shadow duration-500 border border-border/50"
           >
             {/* Subtle Glow Effect */}
             <div className="absolute -inset-1 bg-gradient-to-r from-accent/20 to-purple-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500 -z-10" />

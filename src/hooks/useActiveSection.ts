@@ -4,30 +4,34 @@ export function useActiveSection(sectionIds: string[]) {
   const [activeSection, setActiveSection] = useState<string>("");
 
   useEffect(() => {
-    const observers = new Map();
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight / 3; // Offset to trigger earlier
 
-    const callback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
+      for (const id of sectionIds) {
+        const element = document.getElementById(id);
+        if (!element) continue;
+
+        const { offsetTop, offsetHeight } = element;
+
+        if (
+          scrollPosition >= offsetTop &&
+          scrollPosition < offsetTop + offsetHeight
+        ) {
+          setActiveSection(id);
+          break;
         }
-      });
+      }
     };
 
-    const observer = new IntersectionObserver(callback, {
-      rootMargin: "-50% 0px -50% 0px", // Trigger when section is in middle of viewport
-    });
+    // Initial check
+    // Use a small timeout to ensure DOM is ready after navigation
+    const timeoutId = setTimeout(handleScroll, 100);
 
-    sectionIds.forEach((id) => {
-      const element = document.getElementById(id);
-      if (element) {
-        observer.observe(element);
-        observers.set(id, element);
-      }
-    });
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      observers.forEach((element) => observer.unobserve(element));
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timeoutId);
     };
   }, [sectionIds]);
 

@@ -1,6 +1,6 @@
 "use client";
 import { motion, useScroll, useSpring } from "framer-motion";
-import React, { useRef } from "react";
+import { useRef } from "react";
 
 import portfolioData from "@/data/portfolio-data.json";
 

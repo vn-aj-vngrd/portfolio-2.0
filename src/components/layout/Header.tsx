@@ -8,7 +8,8 @@ import {
 } from "framer-motion";
 import { ArrowUp, Mail, Menu, X } from "lucide-react";
 import Link from "next/link";
-import React, { useState } from "react";
+import { usePathname } from "next/navigation";
+import{ useState } from "react";
 
 import { useActiveSection } from "@/hooks/useActiveSection";
 
@@ -33,6 +34,7 @@ const sectionIds = [
 
 export const Header = () => {
   const { scrollY } = useScroll();
+  const pathname = usePathname();
   const [isCompact, setIsCompact] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const activeSection = useActiveSection(sectionIds);
@@ -45,6 +47,8 @@ export const Header = () => {
       setIsMobileMenuOpen(false);
     }
   });
+
+  if (pathname === "/resume") return null;
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -119,7 +123,7 @@ export const Header = () => {
                     <div className="h-4 w-px bg-border/50" />
                     <ThemeToggle />
                     <Button variant="primary" size="sm" asChild>
-                      <Link href="/resume.pdf" target="_blank">
+                      <Link href="/resume" target="_blank">
                         Resume
                       </Link>
                     </Button>
@@ -172,7 +176,7 @@ export const Header = () => {
                         </Link>
                       ))}
                       <Button variant="primary" className="w-full mt-2" asChild>
-                        <Link href="/resume.pdf" target="_blank">
+                        <Link href="/resume" target="_blank">
                           Resume
                         </Link>
                       </Button>

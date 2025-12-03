@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 import portfolioData from "@/data/portfolio-data.json";
 
@@ -48,8 +48,8 @@ export const Hero = () => {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Button size="lg" className="h-14 px-8 text-lg" asChild>
-            <a href="/resume.pdf" target="_blank">
-              Download Resume <Download className="h-5 w-5" />
+            <a href="/resume" target="_blank">
+              View Resume <ArrowUpRight className="h-5 w-5" />
             </a>
           </Button>
           <Button

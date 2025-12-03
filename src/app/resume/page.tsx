@@ -1,6 +1,15 @@
 "use client";
 
-import { Download, Github, Globe, Linkedin, Mail, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
+import {
+  ArrowLeft,
+  Download,
+  Github,
+  Globe,
+  Linkedin,
+  Mail,
+  MapPin,
+} from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
@@ -23,15 +32,31 @@ export default function ResumePage() {
   return (
     <div className="min-h-screen bg-muted/30 py-12 px-4 sm:px-6 lg:px-8">
       {/* Controls */}
-      <div className="max-w-[210mm] mx-auto mb-8 flex justify-end print:hidden">
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="max-w-[210mm] mx-auto mb-8 flex justify-between items-center print:hidden"
+      >
+        <Button variant="outline" asChild className="gap-2">
+          <Link href="/">
+            <ArrowLeft size={16} />
+            Back to Portfolio
+          </Link>
+        </Button>
         <Button onClick={() => handlePrint()} className="gap-2">
           <Download size={16} />
           Download PDF
         </Button>
-      </div>
+      </motion.div>
 
       {/* Resume Paper */}
-      <div className="max-w-[210mm] mx-auto bg-white shadow-xl print:shadow-none print:max-w-none">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="max-w-[210mm] mx-auto bg-white shadow-xl print:shadow-none print:max-w-none"
+      >
         <div
           ref={componentRef}
           className="p-[15mm] md:p-[20mm] bg-white text-slate-900 min-h-[297mm]"
@@ -102,7 +127,7 @@ export default function ResumePage() {
           {/* Skills */}
           <section className="mb-6">
             <h3 className="text-sm font-bold uppercase tracking-wider text-slate-500 mb-3 border-b border-slate-200 pb-1">
-              Technical Skills
+              Skills
             </h3>
             <div className="grid grid-cols-1 gap-2 text-sm">
               {Object.entries(skills).map(([category, items]) => (
@@ -228,7 +253,7 @@ export default function ResumePage() {
             </section>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

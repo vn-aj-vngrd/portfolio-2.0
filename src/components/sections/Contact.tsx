@@ -125,7 +125,7 @@ export const Contact = () => {
 
             <button
               onClick={handleCopy}
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 hover:bg-accent hover:text-white transition-all duration-300 group/copy"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 hover:bg-accent hover:text-white transition-all duration-300 group/copy cursor-pointer"
               aria-label="Copy email address"
             >
               <Text as="span" className="text-sm font-medium sm:hidden">

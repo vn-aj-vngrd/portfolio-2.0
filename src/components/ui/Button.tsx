@@ -1,6 +1,6 @@
 import { Slot } from "@radix-ui/react-slot";
 import { type ClassValue, clsx } from "clsx";
-import { ButtonHTMLAttributes,forwardRef } from "react";
+import { ButtonHTMLAttributes, forwardRef } from "react";
 import { twMerge } from "tailwind-merge";
 
 function cn(...inputs: ClassValue[]) {
@@ -8,7 +8,14 @@ function cn(...inputs: ClassValue[]) {
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "outline" | "ghost" | "link";
+  variant?:
+    | "primary"
+    | "secondary"
+    | "outline"
+    | "ghost"
+    | "link"
+    | "glass"
+    | "subtle";
   size?: "sm" | "md" | "lg" | "icon";
   asChild?: boolean;
 }
@@ -28,6 +35,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         "border border-border bg-transparent hover:bg-muted active:scale-[0.98]",
       ghost: "hover:bg-muted text-foreground active:scale-[0.98]",
       link: "text-accent underline-offset-4 hover:underline p-0 h-auto",
+      glass:
+        "bg-background/50 backdrop-blur-sm border border-border/50 hover:bg-background/80 text-foreground active:scale-[0.98]",
+      subtle:
+        "bg-muted/50 hover:bg-accent hover:text-white text-muted-foreground active:scale-[0.98] transition-colors duration-300",
     };
 
     const sizes = {

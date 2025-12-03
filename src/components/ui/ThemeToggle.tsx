@@ -37,7 +37,7 @@ export function ThemeToggle({ compact = false }: { compact?: boolean }) {
       onClick={() => setTheme(isDark ? "light" : "dark")}
       className={`rounded-full ${
         compact
-          ? "w-8 h-8 hover:bg-muted text-muted-foreground hover:text-foreground"
+          ? "w-8 h-8 text-muted-foreground hover:text-foreground"
           : "w-9 h-9"
       }`}
     >

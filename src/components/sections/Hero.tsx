@@ -52,9 +52,9 @@ export const Hero = () => {
             </a>
           </Button>
           <Button
-            variant="outline"
+            variant="glass"
             size="lg"
-            className="h-14 px-8 text-lg bg-background/50 backdrop-blur-sm"
+            className="h-14 px-8 text-lg"
             asChild
           >
             <a href="#highlights">

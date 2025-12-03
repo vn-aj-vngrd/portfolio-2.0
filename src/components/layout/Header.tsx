@@ -9,7 +9,7 @@ import {
 import { ArrowUp, Mail, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import{ useState } from "react";
+import { useState } from "react";
 
 import { useActiveSection } from "@/hooks/useActiveSection";
 
@@ -132,13 +132,15 @@ export const Header = () => {
                   {/* Mobile Menu Toggle */}
                   <div className="flex items-center gap-4 md:hidden">
                     <ThemeToggle />
-                    <button
-                      className="p-2 text-foreground cursor-pointer"
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="text-foreground"
                       onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                       aria-label="Toggle menu"
                     >
                       {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                    </button>
+                    </Button>
                   </div>
                 </div>
 
@@ -235,21 +237,26 @@ export const Header = () => {
               <div className="h-4 w-px bg-border" />
 
               <div className="flex items-center gap-1">
-                <button
+                <Button
+                  variant="ghost"
+                  size="icon"
                   onClick={scrollToTop}
-                  className="p-2 hover:bg-muted rounded-full transition-colors text-muted-foreground hover:text-foreground cursor-pointer"
+                  className="rounded-full text-muted-foreground hover:text-foreground"
                   aria-label="Back to top"
                 >
                   <ArrowUp size={16} />
-                </button>
+                </Button>
 
-                <Link
-                  href="#contact"
-                  className="p-2 hover:bg-muted rounded-full transition-colors text-muted-foreground hover:text-foreground"
-                  aria-label="Contact"
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="rounded-full text-muted-foreground hover:text-foreground"
+                  asChild
                 >
-                  <Mail size={16} />
-                </Link>
+                  <Link href="#contact" aria-label="Contact">
+                    <Mail size={16} />
+                  </Link>
+                </Button>
                 <ThemeToggle compact />
               </div>
             </motion.div>

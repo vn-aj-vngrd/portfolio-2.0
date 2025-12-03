@@ -123,12 +123,14 @@ export const Contact = () => {
 
             <Box className="hidden sm:block w-px h-8 bg-border/50" />
 
-            <button
+            <Button
+              variant="subtle"
+              size="sm"
               onClick={handleCopy}
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 hover:bg-accent hover:text-white transition-all duration-300 group/copy cursor-pointer"
+              className="group/copy"
               aria-label="Copy email address"
             >
-              <Text as="span" className="text-sm font-medium sm:hidden">
+              <Text as="span" className="text-sm font-medium sm:hidden mr-2">
                 Copy
               </Text>
               <Box className="relative w-4 h-4">
@@ -156,7 +158,7 @@ export const Contact = () => {
                   )}
                 </AnimatePresence>
               </Box>
-            </button>
+            </Button>
           </FadeIn>
         </Flex>
       </FadeIn>

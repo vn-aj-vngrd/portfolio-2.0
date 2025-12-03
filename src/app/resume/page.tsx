@@ -46,17 +46,20 @@ export default function ResumePage() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="max-w-[210mm] mx-auto mb-8 flex justify-between items-center print:hidden"
+        className="max-w-[210mm] mx-auto mb-8 flex flex-col sm:flex-row gap-4 sm:gap-0 justify-between items-center print:hidden"
       >
-        <Button variant="outline" asChild className="gap-2">
+        <Button variant="outline" asChild className="gap-2 w-full sm:w-auto">
           <Link href="/">
             <ArrowLeft size={16} />
             Back to Portfolio
           </Link>
         </Button>
-        <Button onClick={() => handlePrint()} className="gap-2">
+        <Button
+          onClick={() => handlePrint()}
+          className="gap-2 w-full sm:w-auto"
+        >
           <Download size={16} />
-          Download PDF
+          Download
         </Button>
       </motion.div>
 

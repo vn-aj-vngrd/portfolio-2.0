@@ -23,17 +23,62 @@ export const Contact = () => {
   return (
     <Section id="contact" className="relative overflow-hidden">
       <ContactBackground />
-      <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-4xl font-semibold mb-6 tracking-tight">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: {
+              staggerChildren: 0.15,
+            },
+          },
+        }}
+        className="max-w-2xl mx-auto text-center"
+      >
+        <motion.h2
+          variants={{
+            hidden: { opacity: 0, y: 20, filter: "blur(10px)" },
+            visible: {
+              opacity: 1,
+              y: 0,
+              filter: "blur(0px)",
+              transition: { duration: 0.6, ease: "easeOut" },
+            },
+          }}
+          className="text-4xl font-semibold mb-6 tracking-tight"
+        >
           Get In Touch
-        </h2>
-        <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
+        </motion.h2>
+        <motion.p
+          variants={{
+            hidden: { opacity: 0, y: 20, filter: "blur(10px)" },
+            visible: {
+              opacity: 1,
+              y: 0,
+              filter: "blur(0px)",
+              transition: { duration: 0.6, ease: "easeOut" },
+            },
+          }}
+          className="text-lg text-muted-foreground mb-12 leading-relaxed"
+        >
           I&apos;m currently open to new opportunities. Whether you have a
           question or just want to say hi, I&apos;ll try my best to get back to
           you!
-        </p>
+        </motion.p>
 
-        <form
+        <motion.form
+          variants={{
+            hidden: { opacity: 0, y: 30, filter: "blur(10px)" },
+            visible: {
+              opacity: 1,
+              y: 0,
+              filter: "blur(0px)",
+              transition: { duration: 0.8, ease: "easeOut" },
+            },
+          }}
           className="space-y-6 text-left glass-card p-8 md:p-10 rounded-3xl"
           onSubmit={(e) => e.preventDefault()}
         >
@@ -77,13 +122,19 @@ export const Contact = () => {
           <Button type="submit" size="lg" className="w-full">
             Send Message
           </Button>
-        </form>
+        </motion.form>
 
         <div className="mt-12 flex justify-center w-full">
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            variants={{
+              hidden: { opacity: 0, scale: 0.9, filter: "blur(10px)" },
+              visible: {
+                opacity: 1,
+                scale: 1,
+                filter: "blur(0px)",
+                transition: { duration: 0.6, ease: "easeOut" },
+              },
+            }}
             className="group flex flex-col sm:flex-row items-center gap-4 sm:gap-6 px-6 py-5 sm:px-8 sm:py-4 rounded-[2rem] glass-card border border-border/50 hover:border-accent/20 transition-colors duration-300 max-w-full"
           >
             <div className="p-3 rounded-full bg-accent/10 text-accent shrink-0">
@@ -138,7 +189,7 @@ export const Contact = () => {
             </button>
           </motion.div>
         </div>
-      </div>
+      </motion.div>
     </Section>
   );
 };

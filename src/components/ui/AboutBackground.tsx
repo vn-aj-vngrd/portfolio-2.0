@@ -7,7 +7,7 @@ export const AboutBackground = () => {
     <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none h-full w-full">
       {/* Dot Pattern */}
       <div
-        className="absolute inset-0 bg-[radial-gradient(#00000015_1px,transparent_1px)] dark:bg-[radial-gradient(#ffffff15_1px,transparent_1px)] bg-[size:20px_20px]"
+        className="absolute inset-0 bg-[radial-gradient(#00000015_1px,transparent_1px)] dark:bg-[radial-gradient(#ffffff15_1px,transparent_1px)] bg-size-[20px_20px]"
         style={{
           maskImage:
             "radial-gradient(circle at center, black 40%, transparent 100%)",

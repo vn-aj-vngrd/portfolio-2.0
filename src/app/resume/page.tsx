@@ -24,6 +24,17 @@ export default function ResumePage() {
   const handlePrint = useReactToPrint({
     contentRef: componentRef,
     documentTitle: `Resume_${portfolioData.about.details.name.replace(" ", "_")}`,
+    pageStyle: `
+      @page {
+        size: auto;
+        margin: 20mm;
+      }
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact;
+        }
+      }
+    `,
   });
 
   const { about, experience, education, skills, projects, certifications } =
@@ -59,11 +70,11 @@ export default function ResumePage() {
       >
         <div
           ref={componentRef}
-          className="p-[15mm] md:p-[20mm] bg-white text-slate-900 min-h-[297mm]"
+          className="p-[15mm] md:p-[20mm] print:p-0 bg-white text-slate-900 min-h-[297mm]"
           style={{ fontFamily: "Arial, sans-serif" }} // Safe font for printing
         >
           {/* Header */}
-          <header className="border-b-2 border-slate-900 pb-6 mb-6">
+          <header className="border-b-2 border-slate-900 pb-6 mb-6 break-inside-avoid">
             <h1 className="text-4xl font-bold uppercase tracking-tight mb-2">
               {about.details.name}
             </h1>
@@ -115,7 +126,7 @@ export default function ResumePage() {
           </header>
 
           {/* Summary */}
-          <section className="mb-6">
+          <section className="mb-6 break-inside-avoid">
             <h3 className="text-sm font-bold uppercase tracking-wider text-slate-500 mb-3 border-b border-slate-200 pb-1">
               Professional Summary
             </h3>
@@ -125,7 +136,7 @@ export default function ResumePage() {
           </section>
 
           {/* Skills */}
-          <section className="mb-6">
+          <section className="mb-6 break-inside-avoid">
             <h3 className="text-sm font-bold uppercase tracking-wider text-slate-500 mb-3 border-b border-slate-200 pb-1">
               Skills
             </h3>
@@ -150,7 +161,7 @@ export default function ResumePage() {
             </h3>
             <div className="space-y-5">
               {experience.map((job, index) => (
-                <div key={index}>
+                <div key={index} className="break-inside-avoid">
                   <div className="flex justify-between items-baseline mb-1">
                     <h4 className="font-bold text-slate-900">{job.role}</h4>
                     <span className="text-xs font-medium text-slate-500 whitespace-nowrap ml-4">
@@ -179,7 +190,7 @@ export default function ResumePage() {
             </h3>
             <div className="space-y-4">
               {projects.slice(0, 3).map((project, index) => (
-                <div key={index}>
+                <div key={index} className="break-inside-avoid">
                   <div className="flex justify-between items-baseline mb-1">
                     <h4 className="font-bold text-slate-900">
                       {project.title}
@@ -220,7 +231,7 @@ export default function ResumePage() {
           {/* Education & Certifications Grid */}
           <div className="grid grid-cols-2 gap-8">
             {/* Education */}
-            <section>
+            <section className="break-inside-avoid">
               <h3 className="text-sm font-bold uppercase tracking-wider text-slate-500 mb-3 border-b border-slate-200 pb-1">
                 Education
               </h3>
@@ -236,7 +247,7 @@ export default function ResumePage() {
             </section>
 
             {/* Certifications */}
-            <section>
+            <section className="break-inside-avoid">
               <h3 className="text-sm font-bold uppercase tracking-wider text-slate-500 mb-3 border-b border-slate-200 pb-1">
                 Certifications
               </h3>

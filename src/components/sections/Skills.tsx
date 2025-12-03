@@ -61,7 +61,7 @@ export const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative glass-card rounded-3xl p-8 overflow-hidden hover:shadow-2xl hover:shadow-accent/5 transition-all duration-500 border border-border/50"
+              className="group relative glass-card rounded-3xl p-8 overflow-hidden hover:shadow-2xl hover:shadow-accent/5 transition-shadow duration-500 border border-border/50"
             >
               {/* Gradient Header / Accent */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -86,7 +86,8 @@ export const Skills = () => {
                   <motion.span
                     key={skill}
                     variants={item}
-                    className="px-3.5 py-1.5 bg-background/40 border border-border/40 rounded-full text-sm font-medium text-muted-foreground hover:text-foreground hover:border-accent/40 hover:bg-accent/5 hover:scale-105 transition-all duration-300 cursor-default backdrop-blur-sm"
+                    whileHover={{ scale: 1.05 }}
+                    className="px-3.5 py-1.5 bg-background/40 border border-border/40 rounded-full text-sm font-medium text-muted-foreground hover:text-foreground hover:border-accent/40 hover:bg-accent/5 transition-colors duration-300 cursor-default backdrop-blur-sm"
                   >
                     {skill}
                   </motion.span>

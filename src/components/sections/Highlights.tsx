@@ -26,7 +26,8 @@ const BentoCard = ({
     whileInView={{ opacity: 1, scale: 1 }}
     viewport={{ once: true }}
     transition={{ duration: 0.5, delay }}
-    className={`glass-card rounded-3xl p-6 flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300 ${className}`}
+    whileHover={{ scale: 1.02 }}
+    className={`glass-card rounded-3xl p-6 flex flex-col justify-between transition-colors duration-300 ${className}`}
   >
     {children}
   </motion.div>

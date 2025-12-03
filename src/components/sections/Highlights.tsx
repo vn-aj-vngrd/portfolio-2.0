@@ -4,7 +4,7 @@ import {
   Code2,
   Footprints,
   Gamepad2,
-  GitCommit,
+  Github,
   Heart,
   Linkedin,
   Music,
@@ -236,7 +236,7 @@ export const Highlights = () => {
                     className="p-2 bg-white dark:bg-white/5 rounded-xl shadow-sm border border-black/5 dark:border-white/5 hover:scale-110 transition-all duration-300 group"
                     aria-label="GitHub"
                   >
-                    <GitCommit className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors" />
+                    <Github className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors" />
                   </a>
                   <a
                     href={about.details.linkedin}

@@ -30,31 +30,31 @@ export const Footer = () => {
               </Text>
             </Box>
 
-            <Flex align="center" gap="gap-6">
+            <Flex align="center" gap="gap-4">
               <a
                 href={about.details.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors hover:scale-110 transform duration-200 p-2 hover:bg-accent/10 rounded-full"
+                className="p-2 bg-white dark:bg-white/5 rounded-xl shadow-sm border border-black/5 dark:border-white/5 hover:scale-110 transition-all duration-300 group"
                 aria-label="GitHub"
               >
-                <Github size={20} />
+                <Github className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors" />
               </a>
               <a
                 href={about.details.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors hover:scale-110 transform duration-200 p-2 hover:bg-accent/10 rounded-full"
+                className="p-2 bg-white dark:bg-white/5 rounded-xl shadow-sm border border-black/5 dark:border-white/5 hover:scale-110 transition-all duration-300 group"
                 aria-label="LinkedIn"
               >
-                <Linkedin size={20} />
+                <Linkedin className="w-4 h-4 text-muted-foreground group-hover:text-blue-600 transition-colors" />
               </a>
               <a
                 href={`mailto:${about.details.email}`}
-                className="text-muted-foreground hover:text-foreground transition-colors hover:scale-110 transform duration-200 p-2 hover:bg-accent/10 rounded-full"
+                className="p-2 bg-white dark:bg-white/5 rounded-xl shadow-sm border border-black/5 dark:border-white/5 hover:scale-110 transition-all duration-300 group"
                 aria-label="Email"
               >
-                <Mail size={20} />
+                <Mail className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors" />
               </a>
             </Flex>
           </Flex>

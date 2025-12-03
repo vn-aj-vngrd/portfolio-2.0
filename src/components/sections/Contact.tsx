@@ -62,7 +62,7 @@ export const Contact = () => {
               <Input
                 type="text"
                 id="name"
-                className="w-full px-4 py-3 rounded-xl border-0 bg-muted/50 focus:bg-background focus:ring-2 focus:ring-accent/20 transition-all outline-none h-auto"
+                className="w-full px-4 py-3 rounded-xl border border-border/50 bg-muted/80 focus:bg-background focus:ring-2 focus:ring-accent/20 transition-all outline-none h-auto"
                 placeholder="Van AJ Vanguardia"
               />
             </Stack>
@@ -73,7 +73,7 @@ export const Contact = () => {
               <Input
                 type="email"
                 id="email"
-                className="w-full px-4 py-3 rounded-xl border-0 bg-muted/50 focus:bg-background focus:ring-2 focus:ring-accent/20 transition-all outline-none h-auto"
+                className="w-full px-4 py-3 rounded-xl border border-border/50 bg-muted/80 focus:bg-background focus:ring-2 focus:ring-accent/20 transition-all outline-none h-auto"
                 placeholder={email}
               />
             </Stack>
@@ -86,7 +86,7 @@ export const Contact = () => {
             <Textarea
               id="message"
               rows={5}
-              className="w-full px-4 py-3 rounded-xl border-0 bg-muted/50 focus:bg-background focus:ring-2 focus:ring-accent/20 transition-all outline-none resize-none"
+              className="w-full px-4 py-3 rounded-xl border border-border/50 bg-muted/80 focus:bg-background focus:ring-2 focus:ring-accent/20 transition-all outline-none resize-none"
               placeholder="Hello, I'd like to talk about..."
             />
           </Stack>

@@ -1,5 +1,9 @@
 "use client";
 
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Check, Copy, Mail } from "lucide-react";
+
 import portfolioData from "@/data/portfolio-data.json";
 
 import { Button } from "../ui/Button";
@@ -8,6 +12,13 @@ import { Section } from "../ui/Section";
 
 export const Contact = () => {
   const { email } = portfolioData.about.details;
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <Section id="contact" className="relative overflow-hidden">
@@ -68,18 +79,64 @@ export const Contact = () => {
           </Button>
         </form>
 
-        <div className="mt-12">
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass-card hover:scale-105 transition-transform duration-300 cursor-pointer">
-            <span className="text-muted-foreground font-medium">
-              Or email me directly at
-            </span>
-            <a
-              href={`mailto:${email}`}
-              className="text-accent font-semibold hover:underline"
+        <div className="mt-12 flex justify-center w-full">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="group flex flex-col sm:flex-row items-center gap-4 sm:gap-6 px-6 py-5 sm:px-8 sm:py-4 rounded-[2rem] glass-card border border-border/50 hover:border-accent/20 transition-colors duration-300 max-w-full"
+          >
+            <div className="p-3 rounded-full bg-accent/10 text-accent shrink-0">
+              <Mail size={20} />
+            </div>
+
+            <div className="flex flex-col items-center sm:items-start gap-0.5 text-center sm:text-left">
+              <span className="text-sm text-muted-foreground font-medium">
+                Email me directly
+              </span>
+              <a
+                href={`mailto:${email}`}
+                className="text-base sm:text-lg font-semibold text-foreground hover:text-accent transition-colors break-all sm:break-normal"
+              >
+                {email}
+              </a>
+            </div>
+
+            <div className="hidden sm:block w-px h-8 bg-border/50" />
+
+            <button
+              onClick={handleCopy}
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 hover:bg-accent hover:text-white transition-all duration-300 group/copy"
+              aria-label="Copy email address"
             >
-              {email}
-            </a>
-          </div>
+              <span className="text-sm font-medium sm:hidden">Copy</span>
+              <div className="relative w-4 h-4">
+                <AnimatePresence mode="wait">
+                  {copied ? (
+                    <motion.div
+                      key="check"
+                      initial={{ scale: 0, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      exit={{ scale: 0, opacity: 0 }}
+                      className="absolute inset-0"
+                    >
+                      <Check size={16} />
+                    </motion.div>
+                  ) : (
+                    <motion.div
+                      key="copy"
+                      initial={{ scale: 0, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      exit={{ scale: 0, opacity: 0 }}
+                      className="absolute inset-0"
+                    >
+                      <Copy size={16} />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </button>
+          </motion.div>
         </div>
       </div>
     </Section>

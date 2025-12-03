@@ -13,8 +13,9 @@ export const Counter = ({
   const ref = useRef<HTMLSpanElement>(null);
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, {
-    damping: 60,
+    damping: 20,
     stiffness: 100,
+    restDelta: 0.001,
   });
   const isInView = useInView(ref, { once: true, margin: "-20px" });
 
@@ -27,7 +28,7 @@ export const Counter = ({
   useEffect(() => {
     return springValue.on("change", (latest) => {
       if (ref.current) {
-        ref.current.textContent = Math.floor(latest).toString();
+        ref.current.textContent = Math.round(latest).toString();
       }
     });
   }, [springValue]);

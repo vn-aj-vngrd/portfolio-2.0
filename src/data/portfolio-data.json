@@ -191,7 +191,8 @@
   "projects": [
     {
       "title": "WatchBox",
-      "description": "A personal movie and TV show tracker that lets users discover new content, track their watch history, and create custom lists. Integrated with a third-party movie database API.",
+      "techHighlight": "Optimistic UI & Edge Caching",
+      "description": "Implemented a high-performance media tracker using optimistic UI updates and edge caching to reduce latency by 40%. Integrated TMDB API with robust rate-limiting handling to ensure reliable data fetching.",
       "features": [
         "Real-time Watch Tracking",
         "Custom Lists & Collections",
@@ -212,7 +213,8 @@
     },
     {
       "title": "NextSched",
-      "description": "An intuitive scheduling application for managing appointments and events. Features a drag-and-drop calendar interface, automated reminders, and conflict detection.",
+      "techHighlight": "Complex State Management",
+      "description": "Engineered an intuitive scheduling application featuring a complex drag-and-drop calendar interface. Implemented automated conflict detection algorithms and background jobs for reliable reminders.",
       "features": [
         "Drag-and-Drop Calendar",
         "Automated Reminders",
@@ -231,7 +233,8 @@
     },
     {
       "title": "Astro Foundation Landing Page",
-      "description": "A landing page for the Astro Foundation, a non-profit organization that provides scholarships and resources to underprivileged students.",
+      "techHighlight": "CMS Integration & SEO",
+      "description": "Developed a high-performance landing page with Sanity CMS integration. Achieved 100/100 Core Web Vitals scores through image optimization, lazy loading, and semantic HTML structure.",
       "features": [
         "CMS Integration (Sanity)",
         "SEO Optimized",

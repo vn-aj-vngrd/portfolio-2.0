@@ -23,6 +23,7 @@ const projects = portfolioData.projects.map((project) => ({
   description: project.description,
   features: project.features,
   tags: project.tech,
+  techHighlight: project.techHighlight,
   links: {
     demo: project.link,
     repo: project.code,
@@ -56,9 +57,16 @@ export const Projects = () => {
 
               <CardHeader className="p-8 pb-0">
                 <Flex justify="between" align="start" className="mb-4">
-                  <CardTitle className="text-2xl font-bold tracking-tight group-hover:text-accent transition-colors duration-300">
-                    {project.title}
-                  </CardTitle>
+                  <Box>
+                    {project.techHighlight && (
+                      <Text className="text-xs font-bold text-accent tracking-wider uppercase mb-2">
+                        {project.techHighlight}
+                      </Text>
+                    )}
+                    <CardTitle className="text-2xl font-bold tracking-tight group-hover:text-accent transition-colors duration-300">
+                      {project.title}
+                    </CardTitle>
+                  </Box>
                   <a
                     href={project.links.demo}
                     target="_blank"
@@ -142,8 +150,15 @@ export const Projects = () => {
 
       <FadeIn
         delay={0.4}
-        className="mt-16 relative overflow-hidden rounded-3xl bg-linear-to-br from-accent/5 via-background to-accent/5 dark:from-accent/10 dark:via-background/50 dark:to-accent/10 border border-accent/10 p-8 md:p-12 text-center"
+        className="mt-16 relative overflow-hidden rounded-3xl bg-linear-to-br from-accent/5 via-background to-accent/5 dark:from-accent/10 dark:via-background/50 dark:to-accent/10 border border-accent/10 p-8 md:p-12 text-center group cursor-pointer hover:border-accent/30 transition-colors duration-300"
       >
+        <a
+          href={portfolioData.about.details.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute inset-0 z-20"
+          aria-label="View GitHub Profile"
+        />
         {/* Loading Border Effect */}
         <Box
           className="absolute inset-0 rounded-3xl pointer-events-none"
@@ -169,18 +184,18 @@ export const Projects = () => {
           gap="gap-4"
           className="relative z-10"
         >
-          <Box className="p-3 rounded-full bg-accent/10 text-accent mb-2">
-            <ArrowUpRight className="w-6 h-6" />
+          <Box className="p-3 rounded-full bg-accent/10 text-accent mb-2 group-hover:scale-110 transition-transform duration-300">
+            <Github className="w-8 h-8" />
           </Box>
           <Heading
             variant="h3"
-            className="text-2xl font-semibold tracking-tight"
+            className="text-2xl font-semibold tracking-tight group-hover:text-accent transition-colors duration-300"
           >
-            More Projects in the Works
+            View 60+ Repositories on GitHub
           </Heading>
-          <Text className="text-muted-foreground max-w-md mx-auto text-lg">
-            I&apos;m constantly building and experimenting. Stay tuned for more
-            cool projects coming soon! 🚀
+          <Text className="text-muted-foreground max-w-md mx-auto text-lg group-hover:text-foreground transition-colors duration-300">
+            I&apos;m constantly building and experimenting. Check out my latest
+            work! 🚀
           </Text>
         </Flex>
       </FadeIn>

@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ArrowDown } from "lucide-react";
 
 import portfolioData from "@/data/portfolio-data.json";
 
@@ -57,8 +57,8 @@ export const Hero = () => {
             className="h-14 px-8 text-lg bg-background/50 backdrop-blur-sm"
             asChild
           >
-            <a href="#experience">
-              Experience <ArrowRight className="h-5 w-5" />
+            <a href="#highlights">
+              Explore Portfolio <ArrowDown className="h-5 w-5" />
             </a>
           </Button>
         </FadeIn>

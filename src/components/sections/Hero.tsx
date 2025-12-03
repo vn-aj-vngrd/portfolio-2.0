@@ -15,7 +15,7 @@ export const Hero = () => {
   return (
     <Section
       id="hero"
-      className="min-h-screen flex items-center pt-32 pb-16 justify-center text-center relative overflow-hidden"
+      className="min-h-screen flex items-start md:items-center pt-48! md:pt-32 pb-16 justify-center text-center relative overflow-hidden"
     >
       <HeroBackground />
       <div className="max-w-4xl mx-auto">
@@ -24,7 +24,7 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h1 className="text-6xl md:text-8xl font-semibold tracking-tighter mb-8 leading-[1.05] bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70">
+          <h1 className="text-5xl md:text-8xl font-semibold tracking-tighter mb-8 leading-[1.05] bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70">
             Building digital products with{" "}
             <span className="text-accent">precision</span> and{" "}
             <span className="text-accent">purpose</span>.

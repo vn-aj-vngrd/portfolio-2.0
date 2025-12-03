@@ -1,7 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, GitCommit, Heart, Linkedin, Users, Zap } from "lucide-react";
+import {
+  Code2,
+  Footprints,
+  Gamepad2,
+  GitCommit,
+  Heart,
+  Linkedin,
+  Music,
+  Plane,
+  Trees,
+  Trophy,
+  Users,
+  Zap,
+} from "lucide-react";
 import Image from "next/image";
 
 import data from "@/data/portfolio-data.json";
@@ -11,6 +24,15 @@ import { Counter } from "../ui/Counter";
 import { Section } from "../ui/Section";
 
 const portfolioData = data as PortfolioData;
+
+const hobbyIcons: Record<string, React.ReactNode> = {
+  Music: <Music className="w-3 h-3" />,
+  Basketball: <Trophy className="w-3 h-3" />,
+  "Mobile Legends": <Gamepad2 className="w-3 h-3" />,
+  Travelling: <Plane className="w-3 h-3" />,
+  Jogging: <Footprints className="w-3 h-3" />,
+  Nature: <Trees className="w-3 h-3" />,
+};
 
 const BentoCard = ({
   children,
@@ -178,8 +200,9 @@ export const Highlights = () => {
               {about.hobbies.map((hobby) => (
                 <span
                   key={hobby}
-                  className="px-2 py-1 bg-white/50 dark:bg-black/20 rounded-md text-xs font-medium text-muted-foreground border border-black/5 dark:border-white/5"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/50 dark:bg-black/20 rounded-full text-xs font-medium text-muted-foreground border border-black/5 dark:border-white/5 hover:bg-rose-100/50 dark:hover:bg-rose-900/20 hover:text-rose-600 dark:hover:text-rose-400 transition-colors duration-300 cursor-default"
                 >
+                  {hobbyIcons[hobby] || <Heart className="w-3 h-3" />}
                   {hobby}
                 </span>
               ))}

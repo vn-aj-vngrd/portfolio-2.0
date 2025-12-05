@@ -104,7 +104,7 @@
   ],
   "education": [
     {
-      "school": "University of Cebu",
+      "school": "University of San Carlos",
       "degree": "BS in Information Technology",
       "dates": "2020 - 2024"
     }
@@ -121,13 +121,7 @@
       "Redux",
       "Zustand"
     ],
-    "Backend": [
-      "Node.js",
-      "Express",
-      "ASP.NET Core",
-      "Laravel",
-      "REST APIs"
-    ],
+    "Backend": ["Node.js", "Express", "ASP.NET Core", "Laravel", "REST APIs"],
     "Database": [
       "PostgreSQL",
       "MongoDB",
@@ -221,13 +215,7 @@
         "Conflict Detection",
         "User Management"
       ],
-      "tech": [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "PostgreSQL",
-        "Prisma"
-      ],
+      "tech": ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma"],
       "link": "https://nextsched-beta.vercel.app/",
       "code": "https://github.com/vn-aj-vngrd/next-sched"
     },

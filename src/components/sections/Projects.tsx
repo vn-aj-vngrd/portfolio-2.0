@@ -42,7 +42,7 @@ export const Projects = () => {
         </Heading>
       </FadeIn>
 
-      <Grid className="gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <Grid className="gap-8 md:grid-cols-2">
         {projects.map((project, index) => (
           <FadeIn
             key={index}

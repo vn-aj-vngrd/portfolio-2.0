@@ -184,6 +184,27 @@
   ],
   "projects": [
     {
+      "title": "Crave Roulette",
+      "techHighlight": "AI Integration",
+      "description": "Stop the endless scrolling. Tell us your vibe, and let fate (and AI) decide your next meal in seconds.",
+      "features": [
+        "AI Integration",
+        "Geo Location",
+        "Responsive Design",
+        "Dark Mode"
+      ],
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "Gemini AI",
+        "Tomtom API"
+      ],
+      "link": "https://crave-roulette.vercel.app/",
+      "code": "https://github.com/vn-aj-vngrd/crave-roulette"
+    },
+    {
       "title": "WatchBox",
       "techHighlight": "Optimistic UI & Edge Caching",
       "description": "Implemented a high-performance media tracker using optimistic UI updates and edge caching to reduce latency by 40%. Integrated TMDB API with robust rate-limiting handling to ensure reliable data fetching.",
